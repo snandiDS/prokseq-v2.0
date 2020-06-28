@@ -213,7 +213,7 @@ on the screen would be as follows:
 	   view           SAM<->BAM<->CRAM conversion
 	   depad          convert padded BAM to unpadded BAM
 
-This means the program ran succesfully.
+This means the program ran successfully.
 
 
 PYTHON LIBRARIES:
