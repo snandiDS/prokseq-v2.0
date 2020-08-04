@@ -273,70 +273,65 @@ There should be one parameter file. The entries of the file should be as follows
         #       Define the parameters for AfterQC. Example default parameters
         #       are shown as bellow. All the default parameters are taken.
         #       In case of any change, specify the parameter and value here.
-
-	####################################################################
-	#	File "param.input" - defination file
-	#	Define the paths and parameters to run the external packages.
-	####################################################################
-	#	Describe the Bowtie options below as:
-	#	These are the default values.
-	BOWTIE -I 0
-	BOWTIE -X 500
-	BOWTIE -k 1
-	BOWTIE -p 1
-	#	In case the package salmon is to be run, uncomment the options.
-	#	These are the default values.
-	#SALMONINDEX -k 29
-	#SALMONQUANT -l A
-	#SALMONQUANT -p 2
-	#SALMONQUANT --validateMappings TRUE
-	#	Define the Featurecounts options as below:
-	FEATURECOUNTS a oldAnnotationGFF.gtf
-	FEATURECOUNTS o test
-	#	Specify a count file name
-	COUNTFILE testN.csv
-	#	geneBody coverage.r require a bed file. Specify the name of bed file as below:
-	geneBody_coverage r oldAnnotationGFF.bed
-	#	Specify if batch effect removal is required. FALSE if not required.
-	BATCH_EFFECT_REMOVE TRUE
-	#	For pathway analysis, define the log fold change cutoff as below:
-	PATHWAY cutoffPositive 2.0
-	PATHWAY cutoffNegative -2.0
-	#	For pathway analysis, define the organism in three alphabets as below.
-	#	ypy = Yersinia pseudotuberculosis
-	#	User need to change the kegg abbreviation of their genome which can be
-	#	found in https://www.genome.jp/kegg/catalog/org_list.html. Here ypy is
-	#	the Yersinia pseudotuberculosis YPIII
-	PATHWAY Organism ypy
-	#	For Gene Ontology of the pathway analysis, define GO term and gene name file.
-	PATHWAY TERM2GENE data/TERM2GENE.csv
-	PATHWAY TERM2NAME data/TERM2NAME.csv
-	#	Specify the path to samtools
-	PATH SAMTOOLS /home/snandi/samtools/bin 
-	#	Specify the root path. That means where the ProkSeq bundle is unpacked.
-	#	The location should have the following folders
-	#	1. depend - contains all the binaries of the external packages
-	#	2. scripts - contains all the modules required for ProkSeq, and pipeline-vx.x.sh
-	#	3. data - Contains Gene ontology files for pathway analysis.
-	PATH ROOT /home/snandi/firojPipeline/version_2.6
-	#	If the above environment (depend, scripts, data) is true, the following
-	#	line maye uncommented.
-	#PATH DEFAULT
-	#	Specify the path to geneBody_coverage
-	PATH geneBody_coverage /home/snandi/firojPipeline/version_2.6/depend/RSeQC-2.6.2/scripts/
-	#	Specify the path to FEATURECOUNTS
-	PATH FEATURECOUNTS /home/snandi/firojPipeline/version_2.6/depend/subread-1.4.6-p5-Linux-i386/bin/
-	#	Specify the path to fastqc
-	PATH FASTQC /home/snandi/firojPipeline/version_2.6/depend/FastQC
-	#	Specify the path to bowtie
-	PATH BOWTIE /home/snandi/firojPipeline/version_2.6/depend/bowtie2/bowtie2-2.3.5.1-linux-x86_64
-	#	Specify the path to pypy required for running afterqc
-	PATH PYPY /home/snandi/firojPipeline/version_2.6/depend/pypy2.7-v7.2.0-linux64/bin
-	#	Specify the path to readfasta
-	PATH READFASTA /home/snandi/firojPipeline/version_2.6/depend
-	#
-	#	End of file "param.input"
-	#
+        #AFTERQC:
+        #   -s : 35
+        #   -n : 5
+        #   -p : 35
+        #   --debubble : "TRUE"
+        #   -a : 5
+        #       Define the Featurecounts options as bellow:
+        FEATURECOUNTS:
+           a : oldAnnotationGFF.gtf #Define the Featurecounts input GTF file.
+           o : FeatCount #Define the Featurecounts output file name.
+        #       Specify a count file name
+        COUNTFILE : countFile.csv
+        #       geneBody coverage.r require a bed file. Specify the name of bed file as bellow:
+        geneBody_coverage:
+           r : oldAnnotationGFF.bed
+        #       Specify if batch effect removal is required. FALSE if not required, else TRUE.
+        BATCH_EFFECT_REMOVE : "FALSE"
+        #       Parameters for pathway analysis.
+        #       For pathway analysis, define the organism in three alphabets as bellow.
+        #       ypy = Yersinia pseudotuberculosis
+        #       User need to change the keg abbreviation of their genome which can be
+        #       found in https://www.genome.jp/kegg/catalog/org_list.html. Here ypy is
+        #       the Yersinia pseudotuberculosis YPIII
+        #       If PATHWAY analysis is not required comment out the PATHWAY section.
+        PATHWAY:
+           cutoffPositive : 2.0  #logfold upper limit
+           cutoffNegative : -2.0 #logfold lower limit
+           Organism : ypy
+           # For Gene Ontology of the pathway analysis, define GO term and gene name file.
+           TERM2GENE : data/TERM2GENE.csv
+           TERM2NAME : data/TERM2NAME.csv
+        #       Specify the path to samtools
+        PATH SAMTOOLS : /home/snandi/samtools/bin
+        #       Specify the root path. That means where the ProkSeq bundle is unpacked.
+        #       The location should have the following folders
+        #       1. depend - contains all the binaries of the external packages
+        #       2. scripts - contains all the modules required for ProkSeq, and pipeline-vx.x.sh
+        #       3. data - Contains Gene ontology files for pathway analysis.
+        PATH ROOT : /home/snandi/firojPipeline/version_2.7
+        #       If the above environment (depend, scripts, data) is true, the following
+        #       line maye uncommented.
+        #PATH DEFAULT : "TRUE"
+        #       Specify the path to geneBody_coverage
+        PATH geneBody_coverage : /home/snandi/firojPipeline/version_2.7/depend/RSeQC-2.6.2/scripts/
+        #       Specify the path to FEATURECOUNTS
+        PATH FEATURECOUNTS : /home/snandi/firojPipeline/version_2.7/depend/subread-1.4.6-p5-Linux-i386/bin/
+        #       Specify the path to fastqc
+        PATH FASTQC : /home/snandi/firojPipeline/version_2.7/depend/FastQC
+        #       Specify the path to bowtie
+        PATH BOWTIE : /home/snandi/firojPipeline/version_2.7/depend/bowtie2/bowtie2-2.3.5.1-linux-x86_64
+        #       Specify the path to salmon if salmon is required
+        #PATH SALMON : /home/snandi/firojPipeline/version_2.7/depend/salmon-latest_linux_x86_64/bin
+        #       Specify the path to pypy required for running afterqc
+        PATH PYPY : /home/snandi/firojPipeline/version_2.7/depend/pypy2.7-v7.2.0-linux64/bin
+        #       Specify the path to readfasta
+        PATH READFASTA : /home/snandi/firojPipeline/version_2.7/depend
+        #
+        #       End of file "param.input"
+        #
 
 In general, the entries starting with BOWTIE instructs the program to run the tool with the additional parameter. Similarly FEATURECOUNTS. Entries beginning with PATH indicates the path to the executables of the external tools.  However, if one uses the bundled packages in the depend folder, PATH DEFAULT should be mentioned.
 
