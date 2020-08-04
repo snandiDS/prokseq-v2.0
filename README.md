@@ -1,4 +1,50 @@
 # ProkSeq
+ProkSeq is an automated RNA-seq data analysis package for Prokaryotic, where users can perform all the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis. It has a wide variety of options for differential expression, normalized expression, visualization, and quality control, and publication-quality figures. It is also less time consuming as the user does not need to observe and control the analysis process. The user needs to specify the descriptions of the samples and define the parameter file accordingly. ProkSeq also automatically do the quality filtering of the bad reads and run the analysis on good quality reads.
+
+DOWNLOAD:
+=========
+
+The pipeline can be obtained from the following repositories.
+
+DOCKER:
+------- 
+        We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all
+        bundled in the container.
+        The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1
+
+        Step 1: To pull the image from the Docker Hub registry:
+           docker pull snandids/prokseq-v2.1:v1
+
+        Step 2: To Run:
+           docker run -it snandids/prokseq-v2.1:v1
+           sh-5.0# cd prokseq
+
+        Step 3: Activate the environment
+           sh-5.0# source /etc/profile.d/conda.sh
+           sh-5.0# conda activate py36
+           (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
+
+        Step 4: Run the example
+           Here run the pipeline with the example files:
+              (py36) sh-5.0# python scripts/pipeline-v2.8.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
+              The script is running with PE (paired-end) samples described in
+              samples.bowtie.PEsample, and with the parameters defined in
+              param.input.bowtie. The program is submitted with four processors.
+
+        Step 5: Work with real data. To copy the files (sample[fq/fastq], GTF, BED, fasta, etc) to the container:
+           Find out the containerID from another terminal. For example:
+           Run the command
+              docker ps -a
+           Output (somewhat similar):
+           CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS                    PORTS               NAMES
+           8f780c0a9969        snandids/prokseq-v2.1:v1   "sh"                5 minutes ago       Up 5 minutes                                  fervent_feynman
+
+        Then run the command:
+           docker cp test.fasta 8f780c0a9969:/root/prokseq/test.fasta
+        In this above example, local test.fasta is copied to the container (/root/prokseq/).
+
+
+# ProkSeq
 ProkSeq is an automated RNA-seq data analysis package for Prokaryotic, where users can perform all the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis. It has a wide variety of options for differential expression, normalized expression, visualization, and
 quality control, and publication-quality figures. It is also less time consuming as the user does not need to observe and control the analysis process. The user needs to specify the descriptions of the samples and define the parameter file accordingly. ProkSeq also automatically do the quality filtering of the bad reads and run the analysis on good quality reads.
 
