@@ -29,10 +29,8 @@ The script will run with PE (paired-end) samples described in samples.bowtie.PEs
 
 **Step 5:** How to manage data within your Docker containers.
 Once the ProkSeq pipeline is working successfully with the example files, one can go for the real data.
-There are two ways to manage data within your Docker containers.
-
-   **A. Method 1** - Using volume mounts
-
+There are two ways to manage data within your Docker containers.<br/>
+   **A. Method 1** - Using volume mounts__
    **B. Method 2** - Docker cp
 	   
 **A. Method 1:**
