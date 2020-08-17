@@ -12,7 +12,7 @@ DOCKER:
         bundled in the container.
         The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1
 
-        Step 1: To pull the image from the Docker Hub registry:
+        # Step 1: # To pull the image from the Docker Hub registry:
            docker pull snandids/prokseq-v2.1:v1
 
         Step 2: To Run:
