@@ -13,16 +13,16 @@ We strongly recommend using docker to run the pipeline. The external dependencie
 **Step 1:** To pull the image from the Docker Hub registry:
 > docker pull snandids/prokseq-v2.1:v1
 
-        Step 2: To Run:
-           docker run -it snandids/prokseq-v2.1:v1
-           sh-5.0# cd prokseq
+**Step 2:** To Run:
+> docker run -it snandids/prokseq-v2.1:v1
+> sh-5.0# cd prokseq
 
-        Step 3: Activate the environment
-           sh-5.0# source /etc/profile.d/conda.sh
-           sh-5.0# conda activate py36
-           (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
+**Step 3:** Activate the environment
+> sh-5.0# source /etc/profile.d/conda.sh
+> sh-5.0# conda activate py36
+> (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
 
-        Step 4: Run the example
+**Step 4:** Run the example
            Run the pipeline with the example files:
               (py36) sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
               The script will run with PE (paired-end) samples described in      
