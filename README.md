@@ -12,25 +12,25 @@ DOCKER:
         bundled in the container.
         The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1
 
-        # Step 1: # To pull the image from the Docker Hub registry:
+        **Step 1:** To pull the image from the Docker Hub registry:
            docker pull snandids/prokseq-v2.1:v1
 
-        Step 2: To Run:
+        **Step 2:** To Run:
            docker run -it snandids/prokseq-v2.1:v1
            sh-5.0# cd prokseq
 
-        Step 3: Activate the environment
+        **Step 3:** Activate the environment
            sh-5.0# source /etc/profile.d/conda.sh
            sh-5.0# conda activate py36
            (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
 
-        Step 4: Run the example
+        **Step 4:** Run the example
            Run the pipeline with the example files:
               (py36) sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
               The script will run with PE (paired-end) samples described in      
               samples.bowtie.PEsample, and with the parameters defined in
               param.input.bowtie. The program is submitted with four processors.
-
+	      
         Step 5: How to manage data within your Docker containers.
            Once the ProkSeq pipeline is working successfully with the example files, one can go for the real data.
            There are two ways to manage data within your Docker containers.
