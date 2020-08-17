@@ -56,11 +56,14 @@ To remove the container.
 Then follow the following:<br/>
 In the example below, local test.fasta file is copied to the container (/root/prokseq/).
 > docker cp test.fasta 8f780c0a9969:/root/prokseq/test.fasta
+
 In the example below, a file from `/root/prokseq/` will be copied to the local working directory.
 *Step 1:* First create a file in the container:
 > (py36) sh-5.0# touch TEST.txt
+
 OR:
 > sh-5.0# touch TEST.txt
+
 *Step 2:* Copy the created new file from the container to the local working directory.
 > docker cp 8f780c0a9969:/root/prokseq/TEST.txt .
 
