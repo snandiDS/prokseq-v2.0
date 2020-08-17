@@ -106,6 +106,7 @@ Once all the dependencies and R packages are installed, and the example files ar
 ```
 Then run the following command to test run the pipeline.
 > python scripts/pipeline-v2.8.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
+
 *Description:* The script is running with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.input.bowtie. The program is submitted with four processors.
 
 **To remove:**
