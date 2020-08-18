@@ -390,7 +390,7 @@ There should be one parameter file. The entries of the file should be as follows
         #       End of file "param.input"
         #
 
-In general, the entries starting with BOWTIE instructs the program to run the tool with the additional parameter. Similarly SALMON, AFTERQC, FEATURECOUNTS, etc. Entries beginning with PATH indicates the path to the executables of the external tools.  If one uses the bundled packages in the depend folder, PATH DEFAULT : TRUE line should be uncommented, provided "PATH ROOT : path_to_the_depend" should be mentioned.
+In general, the entries starting with BOWTIE instructs the program to run the tool with the additional parameter. Similarly SALMON, AFTERQC, FEATURECOUNTS, etc. Entries beginning with PATH indicates the path to the executables of the external tools.  If one uses the bundled packages in the depend folder, `PATH DEFAULT : TRUE` line should be uncommented. Note `PATH ROOT : path_to_the_current_working_directory` should be mentioned.
 
 NOTE: The program will override the Bowtie options, and the package salmon will be run if both bowtie and salmon's options are provided. Therefore, if salmon is required, please comment on the Bowtie option lines, and vice versa.
 
@@ -421,7 +421,7 @@ Sample file is required for the program. This file should have the following for
         #       End of file "sample"
         #
 
-In general, this file starts with GENOME entry. As in the example, the genome file to be used in the analysis is SequenceChromosome.fasta. The next argument indicates what would be the prefix of the indexed genome, and where to store.
+In general, this file starts with GENOME entry. As in the example, the genome file to be used in the analysis is SequenceChromosome.fasta. The next argument indicates what would be the prefix of the indexed genome, and where to store.<br/>
 The following lines are FASTQ. The first argument in the entry is forward fastq file, and second is the reverse fastq file. However, if one has only single-end reads, only one entry may be there. The subsequent argument is the SAM file name. This argument specifies the output name of the sam files after running the bowtie. In this example, sampleTreat_1.sam, sampleTreat_2.sam, etc. are the sam files for sampleTreat_1.R1/R2.fq, sampleTreat_2.R1/R2.fq, etc. The last argument is the condition/class of the sample file (example: "treat" and "control").
 
 In case of SALMON:
@@ -448,8 +448,9 @@ In case of SALMON:
         #       End of file "sample"
         #
 
-In general, this file starts with GENOME entry. As in the example, the transcript file to be used in the analysis is transcripts.fasta. The next argument indicates what would be the prefix of the indexed file, and where to store.
+In general, this file starts with GENOME entry. As in the example, the transcript file to be used in the analysis is transcripts.fasta. The next argument indicates what would be the prefix of the indexed file, and where to store.<br/>
 The following lines are FASTQ. The first argument in the entry is forward fastq file and second is the reverse fastq file. However, if one has only single-end reads, only one entry may be there. The subsequent argument is the directory where the alignment file has to be stored. The last argument is the condition/class of the sample file (example: "treat" and "control").
+
 DATA FILES:
 ===========
         1. Samples files in fastq format.
