@@ -198,6 +198,29 @@ EXTERNAL TOOLS:
         Salmon          :       A tool for wicked-fast transcript
                                 quantification from RNA-seq data.
 
+The dependencies mentioned above are essential. However, the executable binaries
+are bundled in the folder "depend". If the user is fetching the package from
+github [https://github.com/snandiDS/prokseq-v2.1], then the user will get a
+script [setup.sh] inside the depend folder.
+Please run this script as
+
+        sh setup.sh
+
+This script will fetch the required dependencies from http://www.fallmanlab.org.
+The script will also ask if the user wants to compile samtools.
+After running the script and accepting Y for compiling the samtools, the output
+on the screen would be as follows:
+
+        -- Viewing
+           flags          explain BAM flags
+           tview          text alignment viewer
+           view           SAM<->BAM<->CRAM conversion
+           depad          convert padded BAM to unpadded BAM
+
+This means the program ran successfully.
+
+R packages:
+-----------
 
         R packages      :       Purpose
         --------                -------
@@ -223,27 +246,6 @@ EXTERNAL TOOLS:
         RUVSeq          :       Remove Unwanted Variation from RNA-Seq Data
         RColorBrewer    :       Required to create nice looking color palettes
                                 especially for thematic maps, used with RUVSeq.
-
-The dependencies mentioned above are essential. However, the executable binaries
-are bundled in the folder "depend". If the user is fetching the package from
-github [https://github.com/snandiDS/prokseq-v2.1], then the user will get a
-script [setup.sh] inside the depend folder.
-Please run this script as
-
-        sh setup.sh
-
-This script will fetch the required dependencies from http://www.fallmanlab.org.
-The script will also ask if the user wants to compile samtools.
-After running the script and accepting Y for compiling the samtools, the output
-on the screen would be as follows:
-
-        -- Viewing
-           flags          explain BAM flags
-           tview          text alignment viewer
-           view           SAM<->BAM<->CRAM conversion
-           depad          convert padded BAM to unpadded BAM
-
-This means the program ran successfully.
 
 
 PYTHON LIBRARIES:
