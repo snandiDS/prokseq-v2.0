@@ -497,6 +497,9 @@ DATA FILES:
         5. Bed file
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
+OUTPUT:
+=======
+__*UPDATE REQD*__
 
 
 INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:
