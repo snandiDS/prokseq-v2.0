@@ -111,10 +111,15 @@ Though the pipeline is written in Python3.6, but some packages included in the p
 
 **Step 4:** Create virtual environment
 > conda create -n yourenvname python=3.6
+
 > conda activate yourenvname
+
 > conda install pandas
+
 > pip2.7 install numpy
+
 > pip2 install qc bitsets RSeQC
+
 > pip2 install --upgrade cython bx-python pysam RSeQC numpy
 
 **Step 5:**
