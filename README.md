@@ -41,8 +41,11 @@ Exit from the existing docker and mount the container with a volume.<br/>
 Assuming the user has all the required data files (sample[fq/fastq], GTF, BED, genome/transcript files, etc) in the folder `/home/user/prokseqData`, the above command will mount the directory `/home/user/prokseqData` in `/root/prokseq/` inside container.<br/>
 User can run the pipeline with appropriate sample files and parameter files inside the docker. 
 > sh-5.0# cd prokseq
+
 > sh-5.0# source /etc/profile.d/conda.sh
+
 > sh-5.0# conda activate py36
+
 > (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
 
 *Modify the parameter file with appropriate path and desired parameters.
