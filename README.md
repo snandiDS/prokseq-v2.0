@@ -252,6 +252,9 @@ PYTHON LIBRARIES:
 ----------------
 This program is written in python 3.6, and uses the following python libraries. os, subprocess, re, pandas, optparse, math, threading. These libraries may be installed using pip.
 
+RUNNING PROKSEQ:
+===============
+
 CHECK TEST RUN:
 ---------------
 
@@ -266,7 +269,7 @@ can be run as follows.
 Note: This will require the files from exampleFiles.tar.gz.
 
 SYNTAX:
-=======
+-------
         Usage: prokseq.py [options] arg
 
         Options:
