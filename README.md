@@ -24,8 +24,9 @@ We strongly recommend using docker to run the pipeline. The external dependencie
 
 **Step 4:** Run the example
 Run the pipeline with the example files:
-> (py36) sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
-The script will run with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.input.bowtie. The program is submitted with four processors.
+> (py36) sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
+
+The script will run with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.input.yaml. The program is submitted with four processors.
 
 **Step 5:** How to manage data within your Docker containers.
 Once the ProkSeq pipeline is working successfully with the example files, one can go for the real data.
@@ -131,9 +132,9 @@ Once all the dependencies and R packages are installed, and the example files ar
               PATH PYPY /home/path/testPrseq/depend/pypy2.7-v7.2.0-linux64/bin
 ```
 Then run the following command to test run the pipeline.
-> python scripts/pipeline-v2.8.py -s samples.bowtie.PEsample -p param.input.bowtie -n 4
+> python scripts/pipeline-v2.8.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
 
-*Description:* The script is running with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.input.bowtie. The program is submitted with four processors.
+*Description:* The script is running with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.bowtie.yaml. The program is submitted with four processors.
 
 **To remove:**
 > conda remove -p /home/path/testPrseq prokseq
