@@ -48,7 +48,7 @@ User can run the pipeline with appropriate sample files and parameter files insi
 
 > (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
 
-*Modify the parameter file with appropriate path and desired parameters.
+*Modify the parameter file with appropriate path and desired parameters.<br/>
 Modify the sample file with the fastq file names and the genome/transcript file names.*
 
 > (py36) sh-5.0# python scripts/prokseq.py -s samples_def_file -p param_def_file -n 4
@@ -84,7 +84,7 @@ In the example below, a file from `/root/prokseq/` will be copied to the local w
 OR:
 > sh-5.0# touch TEST.txt
 
-*Step 2:* Copy the created new file from the container to the local working directory.
+*Step 2:* Copy the created new file from the container to the local working directory. From another termnal run,
 > docker cp 8f780c0a9969:/root/prokseq/TEST.txt .
 
 CONDA:
