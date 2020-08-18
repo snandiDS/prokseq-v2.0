@@ -76,6 +76,7 @@ CONDA:
 
 Example:
 > mkdir testPrseq
+
 > conda install -p /home/user/testPrseq -c snandids prokseq
 
 **Step 2:** Once the package is obtained, run the following commands.
