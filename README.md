@@ -5,7 +5,7 @@ quality control, and publication-quality figures. It is also less time consuming
 DOWNLOAD:
 =========
 The pipeline can be obtained from the following repositories.<br/>
-[GitHub](https://github.com/snandiDS/prokseq-v2.1), Docker (https://hub.docker.com/repository/docker/snandids/prokseq-v2.1), and Anaconda Cloud (https://anaconda.org/snandiDS/prokseq).
+[GitHub](https://github.com/snandiDS/prokseq-v2.1), [Docker](https://hub.docker.com/repository/docker/snandids/prokseq-v2.1), and [Anaconda Cloud](https://anaconda.org/snandiDS/prokseq).
 
 DOCKER:
 -------
