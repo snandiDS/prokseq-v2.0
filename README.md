@@ -140,6 +140,16 @@ Then run the following command to test run the pipeline.
 **To remove:**
 > conda remove -p /home/path/testPrseq prokseq
 
+CHECK TEST RUN:
+---------------
+
+After setting up of the depend directory, one can check if the environment is all setup. The required fastq and other required files for the check run is bundled in exampleFiles.tar.gz. Therefore, this file should be untared or at least should be there in the current working directory. The check script can be run as follows.
+
+> python scripts/runCheck.py
+
+Note: This will require the files from exampleFiles.tar.gz.
+
+
 
 Default directory layout should look like below:
 ------------------------------------------------
@@ -279,19 +289,6 @@ This program is written in python 3.6, and uses the following python libraries. 
 
 RUNNING PROKSEQ:
 ===============
-
-CHECK TEST RUN:
----------------
-
-After setting up of the depend directory, one can check if the environment is
-all setup. The required fastq and other required files for the check run is
-bundled in exampleFiles.tar.gz. Therefore, this file should be untared or
-at least should be there in the current working directory. The check script
-can be run as follows.
-
-        python scripts/runCheck.py
-
-Note: This will require the files from exampleFiles.tar.gz.
 
 SYNTAX:
 -------
