@@ -335,7 +335,7 @@ There should be one parameter file. The entries of the file should be as follows
         #       In case the package salmon is to be run, uncomment the
         #       following options. These are the default values.
         #       These options will overwrite the BOWTIE parameters.
-	#
+        #
         #SALMON:
         #   SALMONINDEX:
         #      -k : 29
@@ -343,38 +343,38 @@ There should be one parameter file. The entries of the file should be as follows
         #      -l : A
         #      -p : 2
         #      --validateMappings : "TRUE"
-	#
+        #
         #       Define the parameters for AfterQC. Example default parameters
         #       are shown as bellow. All the default parameters are taken.
         #       Specify the parameter and value in case of any changes. One can
-	#	add the other parameters with value.
+        #	add the other parameters with value.
         #AFTERQC:
         #   -s : 35
         #   -n : 5
         #   -p : 35
         #   --debubble : "TRUE"
         #   -a : 5
-	#
+        #
         #       Define the Featurecounts options as bellow:
         FEATURECOUNTS:
            a : oldAnnotationGFF.gtf #Define the Featurecounts input GTF file.
            o : FeatCount #Define the Featurecounts output file name.
-	#
+        #
         #       Specify a count file name
         COUNTFILE : countFile.csv
-	#
+        #
         #       geneBody coverage.r require a bed file. Specify the name of bed file as bellow:
         geneBody_coverage:
            r : oldAnnotationGFF.bed
-	#
+        #
         #       Specify if batch effect removal is required. FALSE if not required, else TRUE.
         BATCH_EFFECT_REMOVE : "FALSE"
-	#
+        #
         #Remove Unwanted Variation from RNA-Seq Data
         #To run RUVSeq, uncomment the following two lines.
         RUVSeq:
            nc : 100 #Integer - Top 100 genes as ranked by edgeR p-values. Negative control genes to estimate the factors of unwanted variation.
-	#
+        #
         #       Parameters for pathway analysis.
         #       For pathway analysis, define the organism in three alphabets as bellow.
         #       ypy = Yersinia pseudotuberculosis
@@ -389,7 +389,7 @@ There should be one parameter file. The entries of the file should be as follows
            # For Gene Ontology of the pathway analysis, define GO term and gene name file.
            TERM2GENE : data/TERM2GENE.csv
            TERM2NAME : data/TERM2NAME.csv
-	#
+        #
         #       Specify the root path. That means where the ProkSeq bundle is unpacked.
         #       The PATH ROOT : should indicate the current working directory.
         #       The location should have the following folders
