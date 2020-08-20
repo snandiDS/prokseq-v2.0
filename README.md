@@ -365,7 +365,7 @@ There should be one parameter file. The entries of the file should be as follows
         #Remove Unwanted Variation from RNA-Seq Data
         #To run RUVSeq, uncomment the following two lines.
         RUVSeq:
-           nc : 100 #Integer - Not to consider the top 100 genes as ranked by edgeR p-values.
+           nc : 100 #Integer - Top 100 genes as ranked by edgeR p-values. Negative control genes to estimate the factors of unwanted variation.
         #       Parameters for pathway analysis.
         #       For pathway analysis, define the organism in three alphabets as bellow.
         #       ypy = Yersinia pseudotuberculosis
