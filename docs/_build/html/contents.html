@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="english">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to ProkSeq&#39;s documentation! &#8212; ProkSeq 20.08.2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="INSTALLATION AND DEPENDENCIES:" href="INSTALLATION AND DEPENDENCIES.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-prokseq-s-documentation">
+<h1>Welcome to ProkSeq's documentation!<a class="headerlink" href="#welcome-to-prokseq-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>ProkSeq is an automated RNA-seq data analysis package for Prokaryotic, where users can perform all the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis. It has a wide variety of options for differential expression, normalized expression, visualization, and
+quality control, and publication-quality figures. It is also less time consuming as the user does not need to observe and control the analysis process. The user needs to specify the descriptions of the samples and define the parameter file accordingly. ProkSeq also automatically do the quality filtering of the bad reads and run the analysis on good quality reads.</p>
+<img alt="_images/GraphicalAbstractProkSeq.png" src="_images/GraphicalAbstractProkSeq.png" />
+</div>
+<div class="section" id="download">
+<h1>DOWNLOAD:<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
+<p>The pipeline can be obtained from the following repositories.&lt;br/&gt;
+[GitHub](<a class="reference external" href="https://github.com/snandiDS/prokseq-v2.1">https://github.com/snandiDS/prokseq-v2.1</a>), [Docker](<a class="reference external" href="https://hub.docker.com/repository/docker/snandids/prokseq-v2.1">https://hub.docker.com/repository/docker/snandids/prokseq-v2.1</a>), and [Anaconda Cloud](<a class="reference external" href="https://anaconda.org/snandiDS/prokseq">https://anaconda.org/snandiDS/prokseq</a>).</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html">INSTALLATION AND DEPENDENCIES:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html#pyhton3">Pyhton3:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html#installation-of-r">Installation of R:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html#installation-of-r-bioconductor-packages">Installation of R Bioconductor packages:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html#samtools">Samtools:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html#external-tools">EXTERNAL TOOLS:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="REQUIREMENTS.html">REQUIRMENTS:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="REQUIREMENTS.html#external-tools">EXTERNAL TOOLS:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="REQUIREMENTS.html#r-packages">R packages:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="REQUIREMENTS.html#python-libraries">PYTHON LIBRARIES:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html">SAMPLE FILE:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SAMPLES FILE.html#in-case-of-salmon">In case of SALMON:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html#data-files">DATA FILES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PARAMETER FILE.html">PARAMETER FILE:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PARAMETER FILE.html#remove-unwanted-variation-from-rna-seq-data">Remove Unwanted Variation from RNA-Seq Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PARAMETER FILE.html#parameters-for-pathway-analysis">Parameters for pathway analysis.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PARAMETER FILE.html#select-the-path-of-tools">Select the path of tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RUNNING PROKSEQ.html">RUNNING PROKSEQ:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RUNNING PROKSEQ.html#syntax">SYNTAX:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RUNNING PROKSEQ.html#example">EXAMPLE:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RUNNING PROKSEQ.html#default-directory-layout-should-look-like-below">Default directory layout should look like below:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RUNNING PROKSEQ.html#example-files-layout">Example files layout:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RUNNING PROKSEQ.html#check-test-run">Check test run:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DOCKER.html">DOCKER:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONDA.html">CONDA:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OUTPUT.html">OUTPUT:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OUTPUT.html#prokseq-output">ProkSeq OUTPUT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OUTPUT.html#results-output-as-html">Results OUTPUT as html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">ProkSeq</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html">INSTALLATION AND DEPENDENCIES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="REQUIREMENTS.html">REQUIRMENTS:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html">SAMPLE FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html#data-files">DATA FILES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PARAMETER FILE.html">PARAMETER FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RUNNING PROKSEQ.html">RUNNING PROKSEQ:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCKER.html">DOCKER:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONDA.html">CONDA:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OUTPUT.html">OUTPUT:</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="INSTALLATION AND DEPENDENCIES.html" title="next chapter">INSTALLATION AND DEPENDENCIES:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, S.nandi, Firoj mahmud.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
