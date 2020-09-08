@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="english">
+  <head>
+    <meta charset="utf-8" />
+    <title>RUNNING PROKSEQ: &#8212; ProkSeq 20.08.2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DOCKER:" href="DOCKER.html" />
+    <link rel="prev" title="PARAMETER FILE:" href="PARAMETER FILE.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="running-prokseq">
+<h1>RUNNING PROKSEQ:<a class="headerlink" href="#running-prokseq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>SYNTAX:<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Usage: prokseq.py [options] arg</p>
+<dl class="simple">
+<dt>Options:</dt><dd><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code></dt><dd><p><strong>show this help message and exit</strong></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-s</span> <span class="pre">SAMPLE_FILE_NAME,</span> <span class="pre">--sample=SAMPLE_FILE_NAME</span></code></dt><dd><p><strong>provide the sample file</strong></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">PARAMETER_FILE_NAME,</span> <span class="pre">--param=PARAMETER_FILE_NAME</span></code></dt><dd><p><strong>provide the parameter file</strong></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">NUMBER</span> <span class="pre">OF</span> <span class="pre">PROCESSORS,</span> <span class="pre">--numproc=NUMBER</span> <span class="pre">OF</span> <span class="pre">PROCESSORS</span></code></dt><dd><p><strong>provide the number of processors</strong></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--version</span></code></dt><dd><p><strong>Version of the package</strong></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="example">
+<h2>EXAMPLE:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">scripts/prokseq.py</span> <span class="pre">-s</span> <span class="pre">samples.bowtie.PEsample</span> <span class="pre">-p</span> <span class="pre">param.bowtie.yaml</span> <span class="pre">-n</span> <span class="pre">4</span></code></p>
+</div></blockquote>
+<p>The program will run with sample file <strong>&quot;samples.bowtie.PEsample&quot;</strong>, and parameter file <strong>&quot;param.bowtie.yaml&quot;</strong>. The program will also utilize <strong>4 processors</strong>.</p>
+<p>To run the program, the dependencies mentioned above are essential.</p>
+<p>However, the executable binaries are bundled in the folder <strong>&quot;depend&quot;</strong>.</p>
+<p><strong>An example parameter (param.bowtie.yaml) and sample file (samples.bowtie.PEsample) are bundled together with the package in the exampleFiles.tar.gz.</strong></p>
+</div>
+<div class="section" id="default-directory-layout-should-look-like-below">
+<h2>Default directory layout should look like below:<a class="headerlink" href="#default-directory-layout-should-look-like-below" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>./README.md</p>
+<p>./depend/afterqc</p>
+<p>./depend/bowtie2</p>
+<p>./depend/FastQC</p>
+<p>./depend/pypy2.7-v7.2.0-linux64</p>
+<p>./depend/readFasta</p>
+<p>./depend/RSeQC-2.6.2</p>
+<p>./depend/salmon-latest_linux_x86_64</p>
+<p>./depend/samtools</p>
+<p>./depend/samtools-1.10</p>
+<p>./depend/subread-1.4.6-p5-Linux-i386</p>
+<p>./depend/wigToBigWig</p>
+<p>./scripts/prokseq.py</p>
+<p>./scripts/runCheck.py</p>
+<p>./scripts/prokseq-vT1.py</p>
+<p>./scripts/plotScript.R</p>
+<p>./scripts/gff3_2_gtf.sh</p>
+<p>./scripts/gtf2bed.sh</p>
+<p>./scripts/setup.sh</p>
+<p>./scripts/samtools.sh</p>
+<p>./scripts/libmod</p>
+<p>./scripts/libmod/checkEnv.py</p>
+<p>./scripts/libmod/errMsgFn.py</p>
+<p>./scripts/libmod/execCmd.py</p>
+<p>./scripts/libmod/__init__.py</p>
+<p>./scripts/libmod/pipeFunc.py</p>
+<p>./scripts/libmod/__pycache__</p>
+</div></blockquote>
+</div>
+<div class="section" id="example-files-layout">
+<h2>Example files layout:<a class="headerlink" href="#example-files-layout" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>./sampleCtrl_1.R1.fq</p>
+<p>./sampleCtrl_1.R2.fq</p>
+<p>./sampleCtrl_2.R1.fq</p>
+<p>./sampleCtrl_2.R2.fq</p>
+<p>./sampleCtrl_3.R1.fq</p>
+<p>./sampleCtrl_3.R2.fq</p>
+<p>./sampleTreat_1.R1.fq</p>
+<p>./sampleTreat_1.R2.fq</p>
+<p>./sampleTreat_2.R1.fq</p>
+<p>./sampleTreat_2.R2.fq</p>
+<p>./sampleTreat_3.R1.fq</p>
+<p>./sampleTreat_3.R2.fq</p>
+<p>./samples.bowtie.PEsample</p>
+<p>./samples.bowtie.SEsample</p>
+<p>./samples.salmon.PEsample</p>
+<p>./samples.salmon.SEsample</p>
+<p>./param.bowtie.yaml</p>
+<p>./param.salmon.yaml</p>
+<p>./oldAnnotationGFF.bed</p>
+<p>./oldAnnotationGFF.gtf</p>
+<p>./orf_coding_all.fasta</p>
+<p>./SequenceChromosome.fasta</p>
+</div></blockquote>
+</div>
+<div class="section" id="check-test-run">
+<h2>Check test run:<a class="headerlink" href="#check-test-run" title="Permalink to this headline">¶</a></h2>
+<p>After setting up of the depend directory, one can check if the environment is all setup. The required fastq and other required files for the check run is bundled in <strong>exampleFiles.tar.gz.</strong> Therefore, this file should be untared or at least should be there in the current working directory. The check script can be run as follows.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">python</span> <span class="pre">scripts/runCheck.py</span></code></p>
+<p><strong>Note: This will require the files from exampleFiles.tar.gz.</strong></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ProkSeq</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html">INSTALLATION AND DEPENDENCIES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="REQUIREMENTS.html">REQUIRMENTS:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html">SAMPLE FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html#data-files">DATA FILES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PARAMETER FILE.html">PARAMETER FILE:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RUNNING PROKSEQ:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">SYNTAX:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">EXAMPLE:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-directory-layout-should-look-like-below">Default directory layout should look like below:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-files-layout">Example files layout:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-test-run">Check test run:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DOCKER.html">DOCKER:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONDA.html">CONDA:</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="PARAMETER FILE.html" title="previous chapter">PARAMETER FILE:</a></li>
+      <li>Next: <a href="DOCKER.html" title="next chapter">DOCKER:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, S.nandi, Firoj mahmud.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/RUNNING PROKSEQ.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="english">
+  <head>
+    <meta charset="utf-8" />
+    <title>INSTALLATION AND DEPENDENCIES: &#8212; ProkSeq 20.08.2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="REQUIRMENTS:" href="REQUIREMENTS.html" />
+    <link rel="prev" title="Welcome to ProkSeq&#39;s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="installation-and-dependencies">
+<h1>INSTALLATION AND DEPENDENCIES:<a class="headerlink" href="#installation-and-dependencies" title="Permalink to this headline">¶</a></h1>
+<p><strong>If one or any of the above dependencies are missing user can install it  by following the instructions below.</strong></p>
+<div class="section" id="pyhton3">
+<h2>Pyhton3:<a class="headerlink" href="#pyhton3" title="Permalink to this headline">¶</a></h2>
+<p><strong>Ubuntu</strong>
+Ubuntu 17.10, Ubuntu 18.04 (and above) come with Python 3.6 by default.
+Ubuntu 16.10 and 17.04 do not come with Python 3.6 by default, but it is in the Universe repository.
+You should be able to install it with the following commands:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code>
+<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3.6</span></code></p>
+</div></blockquote>
+<p>For Ubuntu 14.04 or 16.04, Python 3.6 is not in the Universe repository, and user do not need to get
+it from a Personal Package Archive (PPA). For example, to install Python from the “deadsnakes” PPA,
+do the following:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code>
+<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3.6</span></code></p>
+</div></blockquote>
+<p><strong>CentOS</strong>
+User should first update the system with the yum package manager:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">update</span></code>
+<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">yum-utils</span></code></p>
+</div></blockquote>
+<dl class="simple">
+<dt>Then install the CentOS IUS package</dt><dd><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">https://centos7.iuscommunity.org/ius-release.rpm</span></code></p>
+</dd>
+<dt>Then install Python and Pip:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">python36u</span></code>
+<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">python36u-pip</span></code></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="installation-of-r">
+<h2>Installation of R:<a class="headerlink" href="#installation-of-r" title="Permalink to this headline">¶</a></h2>
+<p>The pipeline is tested on R version 3.6.0.
+<strong>Installing R on Ubuntu 19.04/18.04/16.04</strong></p>
+<p>Before installing R, user need to update the system package index and upgrade all installed packages
+using the following two commands:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>
+<code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">apt</span> <span class="pre">-y</span> <span class="pre">upgrade</span></code></p>
+</div></blockquote>
+<dl class="simple">
+<dt>After that, run the following in the command line to install base R.</dt><dd><p><code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">apt</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">r-base</span></code></p>
+</dd>
+</dl>
+<p><strong>Install R on CentOS 7</strong>
+R packages are available in the EPEL repositories. It can be installed by typing:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">epel-release</span></code></p>
+</div></blockquote>
+<dl class="simple">
+<dt>Once the repository is added, install R by typing:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">R</span></code></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="installation-of-r-bioconductor-packages">
+<h2>Installation of R Bioconductor packages:<a class="headerlink" href="#installation-of-r-bioconductor-packages" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))</dt><dd><p>install.packages(&quot;BiocManager&quot;)</p>
+</dd>
+</dl>
+<p><strong>edgeR:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;edgeR&quot;)</span></code></p>
+<p><strong>DESeq2:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;DESeq2&quot;)</span></code></p>
+<p><strong>NOISeq:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;NOISeq&quot;)</span></code></p>
+<p><strong>limma:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;limma&quot;)</span></code></p>
+<p><strong>clusterProfiler:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;clusterProfiler&quot;)</span></code></p>
+<p><strong>apeglm:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;apeglm&quot;)</span></code></p>
+<p><strong>RUVSeq:</strong>
+<code class="docutils literal notranslate"><span class="pre">BiocManager::install(&quot;RUVSeq&quot;)</span></code></p>
+</div></blockquote>
+</div>
+<div class="section" id="samtools">
+<h2>Samtools:<a class="headerlink" href="#samtools" title="Permalink to this headline">¶</a></h2>
+<p><strong>Ubuntu 18.04 or higher</strong>
+Install samtools by entering the following commands in the terminal:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>
+<code class="docutils literal notranslate"><span class="pre">-sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">samtools</span></code></p>
+</div></blockquote>
+<p>For the other version of Ubuntu or centose use the samtools.sh script in the package folder. User can
+go to the PorkSeq folder and open a terminal and write sh samtools.sh. The program will install samtools
+in the samtools directory.</p>
+</div>
+<div class="section" id="external-tools">
+<h2>EXTERNAL TOOLS:<a class="headerlink" href="#external-tools" title="Permalink to this headline">¶</a></h2>
+<p><strong>This program uses the following tools.</strong></p>
+<blockquote>
+<div><p>1.FastQC : This package runs the quality check</p>
+<p>2.Bowtie : Needed for aligning the reads</p>
+<p>3.Pypy : For speed and memory usage we sometime uses pypy an alternative implementation of python 3.6</p>
+<p>4.featureCounts from subread: a software program developed for counting reads to genomic features such
+as genes, exons, promoters and genomic bins.</p>
+<p>5.AfterQc: Tools for automatic filtering trimming of the fastq sequences.</p>
+</div></blockquote>
+<p>To run the program the above mentions dependencies are essential. However, the executable binaries are bundled in the folder depend.
+For ubuntu 18.04 or higher version use</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">|</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3-pandas</span> <span class="pre">to</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<p>User can download the depend folder along with all the dependencies from the following the Link:
+<a class="reference external" href="https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh">https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh</a></p>
+<dl class="simple">
+<dt>OR, follow the following:</dt><dd><ol class="arabic simple">
+<li><p>Create a folder named depend</p></li>
+<li><p>cd depend</p></li>
+<li><p>cp ../scripts/setup.sh .</p></li>
+<li><p>sh setup.sh</p></li>
+</ol>
+</dd>
+</dl>
+<p>The depend foldr will be populated.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ProkSeq</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">INSTALLATION AND DEPENDENCIES:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyhton3">Pyhton3:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-r">Installation of R:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-r-bioconductor-packages">Installation of R Bioconductor packages:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samtools">Samtools:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-tools">EXTERNAL TOOLS:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="REQUIREMENTS.html">REQUIRMENTS:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html">SAMPLE FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html#data-files">DATA FILES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PARAMETER FILE.html">PARAMETER FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RUNNING PROKSEQ.html">RUNNING PROKSEQ:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCKER.html">DOCKER:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONDA.html">DOCKER:</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to ProkSeq's documentation!</a></li>
+      <li>Next: <a href="REQUIREMENTS.html" title="next chapter">REQUIRMENTS:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, S.nandi, Firoj mahmud.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/INSTALLATION AND DEPENDENCIES.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
