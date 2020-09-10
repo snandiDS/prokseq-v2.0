@@ -19,12 +19,12 @@ The pipeline can be obtained from the following repositories.<br/>
 .. toctree::
    :maxdepth:9
    
-   REQUIREMENTS
-   SAMPLES FILE
-   PARAMETER FILE
    RUNNING PROKSEQ
    DOCKER
    CONDA
+   REQUIREMENTS
+   SAMPLES FILE
+   PARAMETER FILE
    OUTPUT
    INSTALLATION AND DEPENDENCIES
    FREQUENTLY ASKED QUESTIONS
