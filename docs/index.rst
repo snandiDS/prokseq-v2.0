@@ -19,7 +19,6 @@ The pipeline can be obtained from the following repositories.<br/>
 .. toctree::
    :maxdepth:9
    
-   INSTALLATION AND DEPENDENCIES
    REQUIREMENTS
    SAMPLES FILE
    PARAMETER FILE
@@ -27,6 +26,7 @@ The pipeline can be obtained from the following repositories.<br/>
    DOCKER
    CONDA
    OUTPUT
+   INSTALLATION AND DEPENDENCIES
    FREQUENTLY ASKED QUESTIONS
    
    
