@@ -1,0 +1,1200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ProkSeq’s documentation! &mdash; prokSeq 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> prokSeq
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">ProkSeq’s documentation!</a></li>
+<li><a class="reference internal" href="#download">DOWNLOAD:</a><ul>
+<li><a class="reference internal" href="#id1">DOCKER:</a></li>
+<li><a class="reference internal" href="#conda">CONDA:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#check-test-run">CHECK TEST RUN:</a></li>
+<li><a class="reference internal" href="#default-directory-layout-should-look-like-below">Default directory layout should look like below:</a></li>
+<li><a class="reference internal" href="#example-files-layout">Example files layout:</a></li>
+<li><a class="reference internal" href="#requirments">REQUIRMENTS:</a><ul>
+<li><a class="reference internal" href="#external-tools">EXTERNAL TOOLS:</a></li>
+<li><a class="reference internal" href="#r-packages">R packages:</a></li>
+<li><a class="reference internal" href="#python-libraries">PYTHON LIBRARIES:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-prokseq">RUNNING PROKSEQ:</a><ul>
+<li><a class="reference internal" href="#syntax">SYNTAX:</a></li>
+<li><a class="reference internal" href="#example">EXAMPLE:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#parameter-file">PARAMETER FILE:</a></li>
+<li><a class="reference internal" href="#sample-file">SAMPLE FILE:</a></li>
+<li><a class="reference internal" href="#data-files">DATA FILES:</a></li>
+<li><a class="reference internal" href="#output">OUTPUT:</a><ul>
+<li><a class="reference internal" href="#qc-prefilter">1. <strong>QC_preFilter</strong>:</a></li>
+<li><a class="reference internal" href="#qc-afterfilter">2. <strong>QC_afterFilter</strong>:</a></li>
+<li><a class="reference internal" href="#alighmentfile">3. <strong>alighmentFile</strong>:</a></li>
+<li><a class="reference internal" href="#countandexpression">4. <strong>countAndExpression</strong>:</a></li>
+<li><a class="reference internal" href="#diffexpresults">5. <strong>DiffExpResults</strong>:</a></li>
+<li><a class="reference internal" href="#pathwayenrichment">6. <strong>PathwayEnrichment</strong></a></li>
+<li><a class="reference internal" href="#plots">8. <strong>Plots</strong>:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-instruction-for-the-dependencies">INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:</a><ul>
+<li><a class="reference internal" href="#pyhton3">Pyhton3:</a></li>
+<li><a class="reference internal" href="#installation-of-r">Installation of R:</a></li>
+<li><a class="reference internal" href="#installation-of-r-bioconductor-packages">Installation of R Bioconductor packages:</a></li>
+<li><a class="reference internal" href="#samtools">Samtools:</a></li>
+<li><a class="reference internal" href="#id2">EXTERNAL TOOLS:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">prokSeq</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ProkSeq’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="prokseq-s-documentation">
+<h1>ProkSeq’s documentation!<a class="headerlink" href="#prokseq-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>ProkSeq is an automated RNA-seq data analysis package for Prokaryotic, where users can perform all the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis. It has a wide variety of options for differential expression, normalized expression, visualization, and
+quality control, and publication-quality figures. It is also less time consuming as the user does not need to observe and control the analysis process. The user needs to specify the descriptions of the samples and define the parameter file accordingly. ProkSeq also automatically do the quality filtering of the bad reads and run the analysis on good quality reads.</p>
+<a class="reference internal image-reference" href="_images/GraphicalAbstractProkSeq.png"><img alt="alternate text" class="align-center" src="_images/GraphicalAbstractProkSeq.png" style="width: 400.0px; height: 500.0px;" /></a>
+</div>
+<div class="section" id="download">
+<h1>DOWNLOAD:<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
+<p>The pipeline can be obtained from the following repositories.
+<a class="reference external" href="https://github.com/snandiDS/prokseq-v2.1">[GitHub]</a>, <a class="reference external" href="https://hub.docker.com/repository/docker/snandids/prokseq-v2.1">[Docker]</a>, and <a class="reference external" href="https://anaconda.org/snandiDS/prokseq">[Anaconda Cloud]</a>.</p>
+<div class="section" id="id1">
+<h2>DOCKER:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1</p>
+<p><strong>Step 1:</strong> To pull the image from the Docker Hub registry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">snandids</span><span class="o">/</span><span class="n">prokseq</span><span class="o">-</span><span class="n">v2</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span><span class="n">v1</span>
+</pre></div>
+</div>
+<p><strong>Step 2:</strong> To Run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it snandids/prokseq-v2.1:v1
+sh-5.0# <span class="nb">cd</span> prokseq
+</pre></div>
+</div>
+<p><strong>Step 3:</strong> Activate the environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh-5.0# <span class="nb">source</span> /etc/profile.d/conda.sh
+sh-5.0# conda activate py36
+<span class="o">(</span>py36<span class="o">)</span> sh-5.0# &lt;YOU WILL GET THIS PROMPT&gt;
+</pre></div>
+</div>
+<p><strong>Step 4:</strong> Run the example
+Run the pipeline with the example files</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>py36<span class="o">)</span> sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n <span class="m">4</span>
+</pre></div>
+</div>
+<p>The script will run with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.input.yaml. The program is submitted with four processors.</p>
+<p><strong>Step 5:</strong> How to manage data within your Docker containers.</p>
+<div class="line-block">
+<div class="line">Once the ProkSeq pipeline is working successfully with the example files, one can go for the real data.</div>
+<div class="line">There are two ways to manage data within your Docker containers.</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>A. Method 1</strong> - Using volume mounts &lt;br/&gt;</p></li>
+<li><p><strong>B. Method 2</strong> - Docker cp</p></li>
+</ul>
+</div></blockquote>
+<p><strong>A. Method 1:</strong></p>
+<div class="line-block">
+<div class="line">Volumes are the preferred mechanism for persisting data generated by and used by Docker containers.</div>
+<div class="line">Exit from the existing docker and mount the container with a volume.</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">prokseqData</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">prokseq</span><span class="o">/</span> <span class="o">--</span><span class="n">name</span> <span class="n">PROKSEQ</span> <span class="n">snandids</span><span class="o">/</span><span class="n">prokseq</span><span class="o">-</span><span class="n">v2</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span><span class="n">v1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Assuming the user has all the required data files (sample[fq/fastq], GTF, BED, genome/transcript files, etc) in the folder <cite>/home/user/prokseqData</cite>, the above command will mount the directory <cite>/home/user/prokseqData</cite> in <cite>/root/prokseq/</cite> inside container.</div>
+<div class="line">User can run the pipeline with appropriate sample files and parameter files inside the docker.</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh-5.0# <span class="nb">cd</span> prokseq
+sh-5.0# <span class="nb">source</span> /etc/profile.d/conda.sh
+sh-5.0# conda activate py36
+<span class="o">(</span>py36<span class="o">)</span> sh-5.0# &lt;YOU WILL GET THIS PROMPT&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><em>Modify the parameter file with appropriate path and desired parameters.</em></div>
+<div class="line"><em>Modify the sample file with the fastq file names and the genome/transcript file names.</em></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>py36<span class="o">)</span> sh-5.0# python scripts/prokseq.py -s samples_def_file -p param_def_file -n <span class="m">4</span>
+</pre></div>
+</div>
+<p>Once done, the user can exit the docker.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>py36<span class="o">)</span> sh-5.0# <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>The output will remain in the <cite>/home/user/prokseqData</cite>.</p>
+<p>To remove the container.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">container</span> <span class="n">rm</span> <span class="n">PROKSEQ</span>
+</pre></div>
+</div>
+<p><strong>B. Method 2:</strong></p>
+<div class="line-block">
+<div class="line">To copy the files (sample[fq/fastq], GTF, BED, fasta (Genome/transcript), etc) to and from the container:</div>
+<div class="line">Find out the containerID from another terminal. For example:</div>
+<div class="line">Run the command</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>Output (somewhat similar)</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                      <span class="n">COMMAND</span>             <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>               <span class="n">NAMES</span>
+ <span class="mi">8</span><span class="n">f780c0a9969</span>        <span class="n">snandids</span><span class="o">/</span><span class="n">prokseq</span><span class="o">-</span><span class="n">v2</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span><span class="n">v1</span>   <span class="s2">&quot;sh&quot;</span>                <span class="mi">5</span> <span class="n">minutes</span> <span class="n">ago</span>       <span class="n">Up</span> <span class="mi">5</span> <span class="n">minutes</span>                                  <span class="n">fervent_feynman</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line">Then follow the following:</div>
+<div class="line"><em>Copy to the container:</em></div>
+<div class="line">In the example below, local test.fasta file is copied to the container <cite>(/root/prokseq/)</cite>.</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="n">test</span><span class="o">.</span><span class="n">fasta</span> <span class="mi">8</span><span class="n">f780c0a9969</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">prokseq</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">fasta</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><em>Copy from the container:</em></div>
+<div class="line">In the example below, a file from <cite>/root/prokseq/</cite> will be copied to the local working directory.</div>
+<div class="line"><em>Step 1:</em> First create a file in the container</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>py36<span class="o">)</span> sh-5.0# touch TEST.txt
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh-5.0# touch TEST.txt
+</pre></div>
+</div>
+<p><em>Step 2:</em> Copy the created new file from the container to the local working directory. From another termnal run,:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">cp</span> <span class="mi">8</span><span class="n">f780c0a9969</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">prokseq</span><span class="o">/</span><span class="n">TEST</span><span class="o">.</span><span class="n">txt</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conda">
+<h2>CONDA:<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h2>
+<p><strong>Step 1:</strong> Fetch the package.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">PATH_TO_DOWNLOAD</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">CHANNEL</span><span class="o">&gt;</span> <span class="n">prokseq</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">testPrseq</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">testPrseq</span> <span class="o">-</span><span class="n">c</span> <span class="n">snandids</span> <span class="n">prokseq</span>
+</pre></div>
+</div>
+<p><strong>Step 2:</strong> Once the package is obtained, run the following commands.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xvzf</span> <span class="n">exampleFiles</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p><strong>Step 3:</strong> Install dependencies.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xvzf</span> <span class="n">depend</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>A depend folder will be created with all the required dependencies. Most of these packages were compiled on architecture x86_64 Fedora 31. Users may have to recompile some of them.</p>
+<p>Install the R and the R bioconductor packages.</p>
+<p>Though the pipeline is written in Python3.6, but some packages included in the pipeline require Python2.7. Therefore, it is advised to install Python2. The program should find python2 and python (python3) in the env PATH. To make life easier, we recommend create environment (Step 4).</p>
+<p><strong>Step 4:</strong> Create virtual environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">yourenvname</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">yourenvname</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="n">pip2</span><span class="o">.</span><span class="mi">7</span> <span class="n">install</span> <span class="n">numpy</span>
+<span class="n">pip2</span> <span class="n">install</span> <span class="n">qc</span> <span class="n">bitsets</span> <span class="n">RSeQC</span>
+<span class="n">pip2</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">cython</span> <span class="n">bx</span><span class="o">-</span><span class="n">python</span> <span class="n">pysam</span> <span class="n">RSeQC</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+<p><strong>Step 5:</strong>
+Once all the dependencies and R packages are installed, and the example files are untared, change the PATH in parameter file (Eg. param.input.bowtie). The PATH should point to the packages.</p>
+<p><em>For example:</em> If you are using the above-mentioned path <cite>[/home/user/testPrseq]</cite> from <strong>Step 1</strong>, then specify the path as below for all the packages in the parameter file.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>           <span class="c1">#       Specify the path to pypy required for running afterqc</span>
+           <span class="n">PATH</span> <span class="n">PYPY</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">testPrseq</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">pypy2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">v7</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">linux64</span><span class="o">/</span><span class="nb">bin</span>
+</pre></div>
+</td></tr></table></div>
+<p>Then run the following command to test run the pipeline.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">pipeline</span><span class="o">-</span><span class="n">v2</span><span class="o">.</span><span class="mf">8.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="n">samples</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">PEsample</span> <span class="o">-</span><span class="n">p</span> <span class="n">param</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">yaml</span> <span class="o">-</span><span class="n">n</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p><em>Description:</em> The script is running with PE (paired-end) samples described in samples.bowtie.PEsample, and with the parameters defined in param.bowtie.yaml. The program is submitted with four processors.</p>
+<p><strong>To remove:</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">testPrseq</span> <span class="n">prokseq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="check-test-run">
+<h1>CHECK TEST RUN:<a class="headerlink" href="#check-test-run" title="Permalink to this headline">¶</a></h1>
+<p>After setting up of the depend directory, one can check if the environment is all setup. The required fastq and other required files for the check run is bundled in exampleFiles.tar.gz. Therefore, this file should be untared or at least should be there in the current working directory. The check script can be run as follows.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">runCheck</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Note: This will require the files from exampleFiles.tar.gz.</div>
+<div class="line">On successful test run, an Output directory will be produced.</div>
+</div>
+</div>
+<div class="section" id="default-directory-layout-should-look-like-below">
+<h1>Default directory layout should look like below:<a class="headerlink" href="#default-directory-layout-should-look-like-below" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="o">.</span>
+     <span class="o">./</span><span class="n">README</span><span class="o">.</span><span class="n">md</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">afterqc</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">bowtie2</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">FastQC</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">pypy2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">v7</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">linux64</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">readFasta</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">RSeQC</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">salmon</span><span class="o">-</span><span class="n">latest_linux_x86_64</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">samtools</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">samtools</span><span class="o">-</span><span class="mf">1.10</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">subread</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">p5</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">i386</span>
+     <span class="o">./</span><span class="n">depend</span><span class="o">/</span><span class="n">wigToBigWig</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">prokseq</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">runCheck</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">prokseq</span><span class="o">-</span><span class="n">vT1</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">plotScript</span><span class="o">.</span><span class="n">R</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">gff3_2_gtf</span><span class="o">.</span><span class="n">sh</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">gtf2bed</span><span class="o">.</span><span class="n">sh</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">samtools</span><span class="o">.</span><span class="n">sh</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="n">checkEnv</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="n">errMsgFn</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="n">execCmd</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="n">pipeFunc</span><span class="o">.</span><span class="n">py</span>
+     <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">libmod</span><span class="o">/</span><span class="n">__pycache__</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="example-files-layout">
+<h1>Example files layout:<a class="headerlink" href="#example-files-layout" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="o">./</span><span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span>
+     <span class="o">./</span><span class="n">samples</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">PEsample</span>
+     <span class="o">./</span><span class="n">samples</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">SEsample</span>
+     <span class="o">./</span><span class="n">samples</span><span class="o">.</span><span class="n">salmon</span><span class="o">.</span><span class="n">PEsample</span>
+     <span class="o">./</span><span class="n">samples</span><span class="o">.</span><span class="n">salmon</span><span class="o">.</span><span class="n">SEsample</span>
+     <span class="o">./</span><span class="n">param</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">yaml</span>
+     <span class="o">./</span><span class="n">param</span><span class="o">.</span><span class="n">salmon</span><span class="o">.</span><span class="n">yaml</span>
+     <span class="o">./</span><span class="n">oldAnnotationGFF</span><span class="o">.</span><span class="n">bed</span>
+     <span class="o">./</span><span class="n">oldAnnotationGFF</span><span class="o">.</span><span class="n">gtf</span>
+     <span class="o">./</span><span class="n">orf_coding_all</span><span class="o">.</span><span class="n">fasta</span>
+     <span class="o">./</span><span class="n">SequenceChromosome</span><span class="o">.</span><span class="n">fasta</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="requirments">
+<h1>REQUIRMENTS:<a class="headerlink" href="#requirments" title="Permalink to this headline">¶</a></h1>
+<p>Users can run the ProkSeq program to see which depending packages are missing. By default, ProkSeq will search for required programs and print the availability of the program.</p>
+<p>ProkSeq requires the following packages:</p>
+<div class="section" id="external-tools">
+<h2>EXTERNAL TOOLS:<a class="headerlink" href="#external-tools" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Package</span><span class="o">/</span><span class="n">program</span> <span class="p">:</span>       <span class="n">Purpose</span>
+<span class="o">---------------</span>         <span class="o">-------</span>
+<span class="n">FastQC</span>          <span class="p">:</span>       <span class="n">Quality</span> <span class="n">check</span>
+<span class="n">Bowtie</span>          <span class="p">:</span>       <span class="n">Aligning</span> <span class="n">the</span> <span class="n">reads</span>
+<span class="n">Pypy</span>            <span class="p">:</span>       <span class="n">For</span> <span class="n">speed</span> <span class="ow">and</span> <span class="n">memory</span> <span class="n">usage</span> <span class="n">we</span> <span class="n">sometimes</span>
+                        <span class="n">uses</span> <span class="n">pypy</span> <span class="n">an</span> <span class="n">alternative</span> <span class="n">implementation</span>
+                        <span class="n">of</span> <span class="n">python</span> <span class="mf">3.6</span>
+<span class="n">featureCounts</span>
+<span class="kn">from</span> <span class="nn">subread</span>    <span class="p">:</span>       <span class="n">Counting</span> <span class="n">reads</span> <span class="n">to</span> <span class="n">genomic</span> <span class="n">features</span> <span class="n">such</span> <span class="k">as</span>
+                        <span class="n">genes</span><span class="p">,</span> <span class="n">exons</span><span class="p">,</span> <span class="n">promoters</span><span class="p">,</span> <span class="ow">and</span> <span class="n">genomic</span> <span class="n">bins</span><span class="o">.</span>
+<span class="n">AfterQc</span>         <span class="p">:</span>       <span class="n">Automatic</span> <span class="n">filtering</span> <span class="n">trimming</span> <span class="n">of</span> <span class="n">the</span> <span class="n">fastq</span>
+                        <span class="n">sequences</span><span class="o">.</span>
+<span class="n">Samtools</span>        <span class="p">:</span>       <span class="n">For</span> <span class="n">post</span><span class="o">-</span><span class="n">processing</span> <span class="n">of</span> <span class="n">the</span> <span class="n">SAM</span> <span class="ow">and</span> <span class="n">BAM</span>
+                        <span class="n">reads</span> <span class="n">alignment</span> <span class="n">files</span><span class="o">.</span>
+<span class="n">Salmon</span>          <span class="p">:</span>       <span class="n">A</span> <span class="n">tool</span> <span class="k">for</span> <span class="n">wicked</span><span class="o">-</span><span class="n">fast</span> <span class="n">transcript</span>
+                        <span class="n">quantification</span> <span class="kn">from</span> <span class="nn">RNA</span><span class="o">-</span><span class="n">seq</span> <span class="n">data</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The dependencies mentioned above are essential. However, the executable binaries
+are bundled in the folder “depend”. If the user is fetching the package from
+github [<a class="reference external" href="https://github.com/snandiDS/prokseq-v2.1">https://github.com/snandiDS/prokseq-v2.1</a>], then the user will get a
+script [setup.sh] inside the depend folder.
+Please run this script as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sh</span> <span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>This script will fetch the required dependencies from <a class="reference external" href="http://www.fallmanlab.org">http://www.fallmanlab.org</a>.
+The script will also ask if the user wants to compile samtools.
+After running the script and accepting Y for compiling the samtools, the output
+on the screen would be as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Viewing</span>
+   <span class="n">flags</span>          <span class="n">explain</span> <span class="n">BAM</span> <span class="n">flags</span>
+   <span class="n">tview</span>          <span class="n">text</span> <span class="n">alignment</span> <span class="n">viewer</span>
+   <span class="n">view</span>           <span class="n">SAM</span><span class="o">&lt;-&gt;</span><span class="n">BAM</span><span class="o">&lt;-&gt;</span><span class="n">CRAM</span> <span class="n">conversion</span>
+   <span class="n">depad</span>          <span class="n">convert</span> <span class="n">padded</span> <span class="n">BAM</span> <span class="n">to</span> <span class="n">unpadded</span> <span class="n">BAM</span>
+</pre></div>
+</div>
+<p>This means the program ran successfully.</p>
+</div>
+<div class="section" id="r-packages">
+<h2>R packages:<a class="headerlink" href="#r-packages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="n">packages</span>      <span class="p">:</span>       <span class="n">Purpose</span>
+<span class="o">--------</span>                <span class="o">-------</span>
+<span class="n">ggplot2</span>         <span class="p">:</span>       <span class="n">A</span> <span class="n">system</span> <span class="k">for</span> <span class="n">declaratively</span> <span class="n">creating</span> <span class="n">graphics</span><span class="p">,</span>
+                        <span class="n">based</span> <span class="n">on</span> <span class="n">The</span> <span class="n">Grammar</span> <span class="n">of</span> <span class="n">Graphics</span><span class="o">.</span>
+
+<span class="n">Bioconductor</span> <span class="n">Packages</span><span class="p">:</span>  <span class="n">Purpose</span>
+<span class="o">---------------------</span>   <span class="o">-------</span>
+<span class="n">DESeq2</span>          <span class="p">:</span>       <span class="n">Differential</span> <span class="n">gene</span> <span class="n">expression</span> <span class="n">analysis</span> <span class="n">based</span>
+                        <span class="n">on</span> <span class="n">the</span> <span class="n">negative</span> <span class="n">binomial</span> <span class="n">distribution</span><span class="o">.</span>
+<span class="n">edgeR</span>           <span class="p">:</span>       <span class="n">Package</span> <span class="k">for</span> <span class="n">examining</span> <span class="n">differential</span> <span class="n">expressi</span><span class="o">-</span>
+                        <span class="n">on</span> <span class="n">of</span> <span class="n">replicated</span> <span class="n">count</span> <span class="n">data</span><span class="o">.</span>
+<span class="n">NOISeq</span>          <span class="p">:</span>       <span class="n">A</span> <span class="n">non</span><span class="o">-</span><span class="n">parametric</span> <span class="n">approach</span> <span class="k">for</span> <span class="n">the</span> <span class="n">different</span><span class="o">-</span>
+                        <span class="n">ial</span> <span class="n">expression</span> <span class="n">analysis</span> <span class="n">of</span> <span class="n">RNseq</span><span class="o">-</span><span class="n">data</span><span class="o">.</span>
+<span class="n">limma</span>           <span class="p">:</span>       <span class="n">A</span> <span class="n">package</span> <span class="k">for</span> <span class="n">the</span> <span class="n">analysis</span> <span class="n">of</span> <span class="n">gene</span> <span class="n">expressi</span><span class="o">-</span>
+                        <span class="n">on</span> <span class="n">data</span> <span class="n">arising</span> <span class="kn">from</span> <span class="nn">microarray</span> <span class="ow">or</span> <span class="n">RNA</span><span class="o">-</span><span class="n">seq</span>
+                        <span class="n">technologies</span><span class="o">.</span>
+<span class="n">clusterProfiler</span> <span class="p">:</span>       <span class="n">To</span> <span class="n">analyze</span> <span class="n">functional</span> <span class="n">profiles</span> <span class="n">of</span> <span class="n">genomic</span>
+                        <span class="n">coordinates</span> <span class="p">(</span><span class="n">supported</span> <span class="n">by</span> <span class="n">ChIPseeker</span><span class="p">),</span> <span class="n">gene</span>
+                         <span class="ow">and</span> <span class="n">gene</span> <span class="n">clusters</span><span class="o">.</span>
+<span class="n">apeglm</span>          <span class="p">:</span>       <span class="n">The</span> <span class="n">adaptive</span> <span class="n">t</span> <span class="n">prior</span> <span class="n">shrinkage</span> <span class="n">estimator</span>
+                        <span class="n">used</span> <span class="n">to</span> <span class="n">Shrink</span> <span class="n">log2</span> <span class="n">fold</span> <span class="n">changes</span><span class="o">.</span>
+<span class="n">RUVSeq</span>          <span class="p">:</span>       <span class="n">Remove</span> <span class="n">Unwanted</span> <span class="n">Variation</span> <span class="kn">from</span> <span class="nn">RNA</span><span class="o">-</span><span class="n">Seq</span> <span class="n">Data</span>
+<span class="n">RColorBrewer</span>    <span class="p">:</span>       <span class="n">Required</span> <span class="n">to</span> <span class="n">create</span> <span class="n">nice</span> <span class="n">looking</span> <span class="n">color</span> <span class="n">palettes</span>
+                        <span class="n">especially</span> <span class="k">for</span> <span class="n">thematic</span> <span class="n">maps</span><span class="p">,</span> <span class="n">used</span> <span class="k">with</span> <span class="n">RUVSeq</span><span class="o">.</span>
+<span class="n">reshape2</span>        <span class="p">:</span>       <span class="n">To</span> <span class="n">transform</span> <span class="n">data</span> <span class="n">between</span> <span class="n">wide</span> <span class="ow">and</span> <span class="n">long</span> <span class="n">formats</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-libraries">
+<h2>PYTHON LIBRARIES:<a class="headerlink" href="#python-libraries" title="Permalink to this headline">¶</a></h2>
+<p>This program is written in python 3.6, and uses the following python libraries. os, subprocess, re, pandas, optparse, math, threading. These libraries may be installed using pip.</p>
+</div>
+</div>
+<div class="section" id="running-prokseq">
+<h1>RUNNING PROKSEQ:<a class="headerlink" href="#running-prokseq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="syntax">
+<h2>SYNTAX:<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">prokseq</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="n">arg</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">-</span><span class="n">s</span> <span class="n">SAMPLE_FILE_NAME</span><span class="p">,</span> <span class="o">--</span><span class="n">sample</span><span class="o">=</span><span class="n">SAMPLE_FILE_NAME</span>
+                        <span class="n">provide</span> <span class="n">the</span> <span class="n">sample</span> <span class="n">file</span>
+  <span class="o">-</span><span class="n">p</span> <span class="n">PARAMETER_FILE_NAME</span><span class="p">,</span> <span class="o">--</span><span class="n">param</span><span class="o">=</span><span class="n">PARAMETER_FILE_NAME</span>
+                        <span class="n">provide</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n">file</span>
+  <span class="o">-</span><span class="n">n</span> <span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">PROCESSORS</span><span class="p">,</span> <span class="o">--</span><span class="n">numproc</span><span class="o">=</span><span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">PROCESSORS</span>
+                        <span class="n">provide</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">processors</span>
+  <span class="o">-</span><span class="n">v</span><span class="p">,</span> <span class="o">--</span><span class="n">version</span>         <span class="n">Version</span> <span class="n">of</span> <span class="n">the</span> <span class="n">package</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>EXAMPLE:<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prokseq</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="n">samples</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">PEsample</span> <span class="o">-</span><span class="n">p</span> <span class="n">param</span><span class="o">.</span><span class="n">bowtie</span><span class="o">.</span><span class="n">yaml</span> <span class="o">-</span><span class="n">n</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>The program will run with sample file “samples.bowtie.PEsample”, and parameter file “param.bowtie.yaml”. The program will also utilize 4 processors.</p>
+<p>To run the program, the dependencies mentioned above are essential. However, the executable binaries are bundled in the folder “depend”. The details of the parameter and the sample files are as below. An example parameter (param.bowtie.yaml) and sample file (samples.bowtie.PEsample) are bundled together with the package in the exampleFiles.tar.gz.</p>
+</div>
+</div>
+<div class="section" id="parameter-file">
+<h1>PARAMETER FILE:<a class="headerlink" href="#parameter-file" title="Permalink to this headline">¶</a></h1>
+<p>There should be one parameter file. The entries of the file should be as follows.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="c1">####################################################################</span>
+     <span class="c1">#       File &quot;param.yaml&quot; - definition file in YAML format. Define</span>
+     <span class="c1">#       the paths and parameters to run the external packages. All</span>
+     <span class="c1">#       the default parameters are considered. However, if users wish</span>
+     <span class="c1">#       to modify any default parameters, please specify here.</span>
+     <span class="c1">#       NOTE: Any flag/parameter which do not require any value,</span>
+     <span class="c1">#       specify &quot;TRUE&quot;/&quot;FALSE.&quot; Quotes are necessary. &quot;TRUE&quot; to</span>
+     <span class="c1">#       invoke the flag and &quot;FALSE&quot; to suppress.</span>
+     <span class="c1">####################################################################</span>
+     <span class="c1">#       Describe the Bowtie options below as:</span>
+     <span class="n">BOWTIE</span><span class="p">:</span>
+        <span class="o">-</span><span class="n">I</span> <span class="p">:</span> <span class="mi">0</span>
+        <span class="o">-</span><span class="n">X</span> <span class="p">:</span> <span class="mi">500</span>
+        <span class="o">-</span><span class="n">k</span> <span class="p">:</span> <span class="mi">1</span>
+        <span class="o">-</span><span class="n">p</span> <span class="p">:</span> <span class="mi">1</span>
+     <span class="c1">#       In case the package salmon is to be run, uncomment the</span>
+     <span class="c1">#       following options. These are the default values.</span>
+     <span class="c1">#       These options will overwrite the BOWTIE parameters.</span>
+     <span class="c1">#</span>
+     <span class="c1">#SALMON:</span>
+     <span class="c1">#   SALMONINDEX:</span>
+     <span class="c1">#      -k : 29</span>
+     <span class="c1">#   SALMONQUANT:</span>
+     <span class="c1">#      -l : A</span>
+     <span class="c1">#      -p : 2</span>
+     <span class="c1">#      --validateMappings : &quot;TRUE&quot;</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Define the parameters for AfterQC. Example default parameters</span>
+     <span class="c1">#       are shown as bellow. All the default parameters are taken.</span>
+     <span class="c1">#       Specify the parameter and value in case of any changes. One can</span>
+     <span class="c1">#       add the other parameters with value.</span>
+     <span class="c1">#AFTERQC:</span>
+     <span class="c1">#   -s : 35</span>
+     <span class="c1">#   -n : 5</span>
+     <span class="c1">#   -p : 35</span>
+     <span class="c1">#   --debubble : &quot;TRUE&quot;</span>
+     <span class="c1">#   -a : 5</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Define the Featurecounts options as bellow:</span>
+     <span class="n">FEATURECOUNTS</span><span class="p">:</span>
+        <span class="n">a</span> <span class="p">:</span> <span class="n">oldAnnotationGFF</span><span class="o">.</span><span class="n">gtf</span> <span class="c1">#Define the Featurecounts input GTF file.</span>
+        <span class="n">o</span> <span class="p">:</span> <span class="n">FeatCount</span> <span class="c1">#Define the Featurecounts output file name.</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Specify a count file name</span>
+     <span class="n">COUNTFILE</span> <span class="p">:</span> <span class="n">countFile</span><span class="o">.</span><span class="n">csv</span>
+     <span class="c1">#</span>
+     <span class="c1">#       geneBody coverage.r require a bed file. Specify the name of bed file as bellow:</span>
+     <span class="n">geneBody_coverage</span><span class="p">:</span>
+        <span class="n">r</span> <span class="p">:</span> <span class="n">oldAnnotationGFF</span><span class="o">.</span><span class="n">bed</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Specify if batch effect removal is required. FALSE if not required, else TRUE.</span>
+     <span class="n">BATCH_EFFECT_REMOVE</span> <span class="p">:</span> <span class="s2">&quot;FALSE&quot;</span>
+     <span class="c1">#</span>
+     <span class="c1">#Remove Unwanted Variation from RNA-Seq Data</span>
+     <span class="c1">#To run RUVSeq, uncomment the following two lines.</span>
+     <span class="n">RUVSeq</span><span class="p">:</span>
+        <span class="n">nc</span> <span class="p">:</span> <span class="mi">100</span> <span class="c1">#Integer - Top 100 genes as ranked by edgeR p-values. Negative control genes to estimate the factors of unwanted variation.</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Parameters for pathway analysis.</span>
+     <span class="c1">#       For pathway analysis, define the organism in three alphabets as bellow.</span>
+     <span class="c1">#       ypy = Yersinia pseudotuberculosis</span>
+     <span class="c1">#       User need to change the keg abbreviation of their genome which can be</span>
+     <span class="c1">#       found in https://www.genome.jp/kegg/catalog/org_list.html. Here ypy is</span>
+     <span class="c1">#       the Yersinia pseudotuberculosis YPIII</span>
+     <span class="c1">#       If PATHWAY analysis is not required comment out the PATHWAY section.</span>
+     <span class="n">PATHWAY</span><span class="p">:</span>
+        <span class="n">cutoffPositive</span> <span class="p">:</span> <span class="mf">2.0</span>  <span class="c1">#logfold upper limit</span>
+        <span class="n">cutoffNegative</span> <span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span> <span class="c1">#logfold lower limit</span>
+        <span class="n">Organism</span> <span class="p">:</span> <span class="n">ypy</span>
+        <span class="c1"># For Gene Ontology of the pathway analysis, define GO term and gene name file.</span>
+        <span class="n">TERM2GENE</span> <span class="p">:</span> <span class="n">data</span><span class="o">/</span><span class="n">TERM2GENE</span><span class="o">.</span><span class="n">csv</span>
+        <span class="n">TERM2NAME</span> <span class="p">:</span> <span class="n">data</span><span class="o">/</span><span class="n">TERM2NAME</span><span class="o">.</span><span class="n">csv</span>
+     <span class="c1">#</span>
+     <span class="c1">#       Specify the root path. That means where the ProkSeq bundle is unpacked.</span>
+     <span class="c1">#       The PATH ROOT : should indicate the current working directory.</span>
+     <span class="c1">#       The location should have the following folders</span>
+     <span class="c1">#       1. depend - contains all the binaries of the external packages</span>
+     <span class="c1">#       2. scripts - contains all the modules required for ProkSeq, and pipeline-vx.x.sh</span>
+     <span class="c1">#       3. data - Contains Gene ontology files for pathway analysis.</span>
+     <span class="c1">#       4. Fastq files, and other genome/transcript files.</span>
+     <span class="c1">#       If the package is stored in the folder/path /home/user/PROKSEK</span>
+     <span class="n">PATH</span> <span class="n">ROOT</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span>
+     <span class="c1">#       If the above environment (depend, scripts, data) is true, the following</span>
+     <span class="c1">#       line maye uncommented.</span>
+     <span class="c1">#PATH DEFAULT : &quot;TRUE&quot;</span>
+     <span class="c1">#       Specify the path to samtools</span>
+     <span class="n">PATH</span> <span class="n">SAMTOOLS</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">samtools</span><span class="o">/</span><span class="nb">bin</span>
+     <span class="c1">#       Specify the path to geneBody_coverage</span>
+     <span class="n">PATH</span> <span class="n">geneBody_coverage</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">RSeQC</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">2</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span>
+     <span class="c1">#       Specify the path to FEATURECOUNTS</span>
+     <span class="n">PATH</span> <span class="n">FEATURECOUNTS</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">subread</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">p5</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">i386</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span>
+     <span class="c1">#       Specify the path to fastqc</span>
+     <span class="n">PATH</span> <span class="n">FASTQC</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">FastQC</span>
+     <span class="c1">#       Specify the path to bowtie</span>
+     <span class="n">PATH</span> <span class="n">BOWTIE</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">bowtie2</span><span class="o">/</span><span class="n">bowtie2</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mf">5.1</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">x86_64</span>
+     <span class="c1">#       Specify the path to salmon if salmon is required</span>
+     <span class="c1">#PATH SALMON : /home/user/PROKSEK/depend/salmon-latest_linux_x86_64/bin</span>
+     <span class="c1">#       Specify the path to pypy required for running afterqc</span>
+     <span class="n">PATH</span> <span class="n">PYPY</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span><span class="o">/</span><span class="n">pypy2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">v7</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">linux64</span><span class="o">/</span><span class="nb">bin</span>
+     <span class="c1">#       Specify the path to readfasta</span>
+     <span class="n">PATH</span> <span class="n">READFASTA</span> <span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">PROKSEK</span><span class="o">/</span><span class="n">depend</span>
+     <span class="c1">#</span>
+     <span class="c1">#       End of file &quot;param.input&quot;</span>
+     <span class="c1">#</span>
+</pre></div>
+</td></tr></table></div>
+<p>In general, the entries starting with BOWTIE instructs the program to run the tool with the additional parameter. Similarly SALMON, AFTERQC, FEATURECOUNTS, etc. Entries beginning with PATH indicates the path to the executables of the external tools.  If one uses the bundled packages in the depend folder, <cite>PATH DEFAULT : TRUE</cite> line should be uncommented. Note <cite>PATH ROOT : path_to_the_current_working_directory</cite> should be mentioned.</p>
+<p>NOTE: The program will override the Bowtie options, and the package salmon will be run if both bowtie and salmon’s options are provided. Therefore, if salmon is required, please comment on the Bowtie option lines, and vice versa.</p>
+</div>
+<div class="section" id="sample-file">
+<h1>SAMPLE FILE:<a class="headerlink" href="#sample-file" title="Permalink to this headline">¶</a></h1>
+<p>Sample file is required for the program. This file should have the following format. Please don’t change the format of the file. Simply replace the fastq, sam and the conditions of the sample.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="c1">###################################################################################</span>
+     <span class="c1">#       File &quot;sample&quot; - sample description file</span>
+     <span class="c1">#       Specify the names of the sample files and tag them as &quot;treat&quot; and &quot;control&quot;.</span>
+     <span class="c1">###################################################################################</span>
+     <span class="c1">#       Specify the genome file, and specify the path where the</span>
+     <span class="c1">#       indexed file will be stored, and the prifex of the indexed genome.</span>
+     <span class="c1">#       Default is &#39;bowtie2_genome&#39;.</span>
+     <span class="n">GENOME</span> <span class="n">SequenceChromosome</span><span class="o">.</span><span class="n">fasta</span> <span class="n">bowtie2_genome</span><span class="o">/</span><span class="n">sequenceChr</span>
+     <span class="c1">#       Specify the fastq files</span>
+     <span class="c1">#       Specify the output name of the sam files.</span>
+     <span class="c1">#       Followed by the tag/class/condition of the sample (treated or control)</span>
+     <span class="c1">#       List all the fastq files as below.</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">sam</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">sam</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">sam</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">sam</span> <span class="n">control</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">sam</span> <span class="n">control</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">sam</span> <span class="n">control</span>
+     <span class="c1">#</span>
+     <span class="c1">#       End of file &quot;sample&quot;</span>
+     <span class="c1">#</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line">In general, this file starts with GENOME entry. As in the example, the genome file to be used in the analysis is SequenceChromosome.fasta. The next argument indicates what would be the prefix of the indexed genome, and where to store.</div>
+<div class="line">The following lines are FASTQ. The first argument in the entry is forward fastq file, and second is the reverse fastq file. However, if one has only single-end reads, only one entry may be there. The subsequent argument is the SAM file name. This argument specifies the output name of the sam files after running the bowtie. In this example, sampleTreat_1.sam, sampleTreat_2.sam, etc. are the sam files for sampleTreat_1.R1/R2.fq, sampleTreat_2.R1/R2.fq, etc. The last argument is the condition/class of the sample file (example: “treat” and “control”).</div>
+</div>
+<p>In case of SALMON:</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="c1">###################################################################################</span>
+     <span class="c1">#       File &quot;sample&quot; - sample description file</span>
+     <span class="c1">#       Specify the names of the sample files and tag them as &quot;treat&quot; and &quot;control&quot;.</span>
+     <span class="c1">###################################################################################</span>
+     <span class="c1">#       Specify the genome file and specify the path where the</span>
+     <span class="c1">#       indexed file will be stored, and the prifex of the indexed genome.</span>
+     <span class="c1">#       Default is &#39;transcripts_index&#39;.</span>
+     <span class="n">GENOME</span> <span class="n">orf_coding_all</span><span class="o">.</span><span class="n">fasta</span> <span class="n">transcripts_index</span>
+     <span class="c1">#       Specify the fastq files</span>
+     <span class="c1">#       Specify the output name of the quant files.</span>
+     <span class="c1">#       Followed by the tag/class/condition of the sample (treated or control)</span>
+     <span class="c1">#       List all the fastq files as bellow.</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant1</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant2</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleTreat_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant3</span> <span class="n">treat</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_1</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant4</span> <span class="n">control</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_2</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant5</span> <span class="n">control</span>
+     <span class="n">FASTQ</span> <span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R1</span><span class="o">.</span><span class="n">fq</span> <span class="n">sampleCtrl_3</span><span class="o">.</span><span class="n">R2</span><span class="o">.</span><span class="n">fq</span> <span class="n">sal_quant6</span> <span class="n">control</span>
+     <span class="c1">#</span>
+     <span class="c1">#       End of file &quot;sample&quot;</span>
+     <span class="c1">#</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line">In general, this file starts with GENOME entry. As in the example, the transcript file to be used in the analysis is transcripts.fasta. The next argument indicates what would be the prefix of the indexed file, and where to store.</div>
+<div class="line">The following lines are FASTQ. The first argument in the entry is forward fastq file and second is the reverse fastq file. However, if one has only single-end reads, only one entry may be there. The subsequent argument is the directory where the alignment file has to be stored. The last argument is the condition/class of the sample file (example: “treat” and “control”).</div>
+</div>
+</div>
+<div class="section" id="data-files">
+<h1>DATA FILES:<a class="headerlink" href="#data-files" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Samples</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">fastq</span> <span class="nb">format</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">Pathway</span> <span class="n">analysis</span> <span class="p">(</span><span class="n">Optional</span><span class="p">):</span>
+        <span class="mf">1.</span> <span class="n">TERN2GENE</span><span class="o">.</span><span class="n">csv</span>
+           <span class="n">Gene</span> <span class="n">Ontology</span> <span class="n">to</span> <span class="n">terms</span> <span class="n">mapping</span> <span class="n">csv</span> <span class="n">file</span> <span class="p">(</span><span class="n">Eg</span><span class="p">:</span> <span class="n">GO</span><span class="p">:</span><span class="mi">0000001</span><span class="p">,</span><span class="n">mitochondrion</span> <span class="n">inheritance</span><span class="p">)</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span>
+           <span class="n">genome</span> <span class="n">specific</span> <span class="n">Gene</span> <span class="n">ontology</span> <span class="n">file</span><span class="o">.</span>  <span class="n">TERM2GENE</span><span class="o">.</span><span class="n">csv</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">comma</span> <span class="n">delimited</span> <span class="mi">2</span> <span class="n">column</span> <span class="n">file</span><span class="o">.</span>
+           <span class="n">First</span> <span class="n">column</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">GO</span> <span class="n">term</span> <span class="ow">and</span> <span class="n">second</span> <span class="n">column</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">gene</span> <span class="n">name</span><span class="o">.</span> <span class="n">User</span> <span class="n">can</span> <span class="n">download</span> <span class="n">the</span> <span class="n">GO</span> <span class="n">file</span>
+           <span class="ow">or</span> <span class="n">GFF</span> <span class="n">annotation</span> <span class="n">file</span> <span class="kn">from</span> <span class="nn">Genome2D</span> <span class="n">webserver</span>
+           <span class="p">(</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">genome2d</span><span class="o">.</span><span class="n">molgenrug</span><span class="o">.</span><span class="n">nl</span><span class="o">/</span><span class="n">g2d_core_select_genbank</span><span class="o">.</span><span class="n">php</span><span class="p">)</span>
+        <span class="mf">2.</span> <span class="n">TERM2NAME</span><span class="o">.</span><span class="n">csv</span>
+           <span class="n">Gene</span> <span class="n">Ontology</span> <span class="n">to</span> <span class="n">gene</span> <span class="n">mapping</span> <span class="n">csv</span> <span class="n">file</span> <span class="p">(</span><span class="n">Eg</span><span class="p">:</span> <span class="n">GO</span><span class="p">:</span><span class="mi">0003688</span><span class="p">,</span><span class="n">YPK_0001</span><span class="p">)</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">GO</span> <span class="n">term</span>
+           <span class="n">classification</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">common</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">organisms</span><span class="o">.</span>
+
+<span class="mf">3.</span> <span class="n">For</span> <span class="n">Bowtie</span> <span class="n">implementation</span><span class="p">:</span>
+      <span class="n">Genome</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span>
+   <span class="n">For</span> <span class="n">Salmon</span> <span class="n">implementation</span><span class="p">:</span>
+      <span class="n">Transcript</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">fasta</span> <span class="nb">format</span>
+<span class="mf">4.</span> <span class="n">GTF</span> <span class="n">file</span>
+<span class="mf">5.</span> <span class="n">Bed</span> <span class="n">file</span>
+</pre></div>
+</div>
+<p>All these files should be declared in SAMPLE FILE and PARAMETER file.</p>
+</div>
+<div class="section" id="output">
+<h1>OUTPUT:<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h1>
+<p>ProkSeq produces several folder with analysis results as a Output folder.</p>
+<p>The structure of the Output directory looks like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alignmentFile</span>
+<span class="n">bam</span>
+<span class="n">countAndExpression</span>
+<span class="n">DiffExpResults</span>
+<span class="n">genomeBrowserFile</span>
+<span class="n">PathwayEnrichment</span>
+<span class="n">plots</span>
+<span class="n">QC_afterFilter</span>
+<span class="n">QC_preFilter</span>
+</pre></div>
+</div>
+<div class="section" id="qc-prefilter">
+<h2>1. <strong>QC_preFilter</strong>:<a class="headerlink" href="#qc-prefilter" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>fastQC out put html file</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="qc-afterfilter">
+<h2>2. <strong>QC_afterFilter</strong>:<a class="headerlink" href="#qc-afterfilter" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Remove bad quality read and filter good quality reads. It contains three subfolder</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>FilteredReads</strong>: good quality filtered fastq files</p></li>
+<li><p><strong>QCfastQ_filtered</strong> : quality checking html file of filtered reads</p></li>
+<li><p><strong>RemovedReads</strong>: Bad quality reads that is removed for analysis</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="alighmentfile">
+<h2>3. <strong>alighmentFile</strong>:<a class="headerlink" href="#alighmentfile" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>.sam</strong>: Sequence Alignment file generated from bowtie2/salmon</p></li>
+<li><p><strong>sam.alignSummary</strong>: Alignment summary information/statistics of the alignment of individual sample to the reference genome.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="countandexpression">
+<h2>4. <strong>countAndExpression</strong>:<a class="headerlink" href="#countandexpression" title="Permalink to this headline">¶</a></h2>
+<p>Depending on the file names provided in the parameter file for the ‘Featurecounts output file’ and ‘COUNTFILE’.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Count.csv</strong> : The file contains total count according to genomic features</p></li>
+<li><p><strong>countFile_TPM_CPM.csv</strong> : The file contains total count according to genomic features as well as Count per miillion(CPM), and Transcript per million (TPM)</p></li>
+<li><p><strong>countFile.NucleotideAvgCount.csv</strong> : THis file contains Average nucleotide expression per gene as well as other total count, CPM and TPM.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="diffexpresults">
+<h2>5. <strong>DiffExpResults</strong>:<a class="headerlink" href="#diffexpresults" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>DESeq2_results.txt</strong>: Differential expression results from DESeq2</p></li>
+<li><p><strong>DESeq2lfcShrink_results</strong>: Differential expression results from DESeq2 with Log2 Fold Shrinkage</p></li>
+<li><p><strong>edgeR_results.txt</strong>: Differential expression results from edgeR</p></li>
+<li><p><strong>afterNoiseq.txt</strong>: Differential expression results from NOISeq</p></li>
+<li><p><strong>RUV_DESeq2_results.txt</strong>: Differential expression results with RUV normalization by using RUVSeq and DESeq2</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="pathwayenrichment">
+<h2>6. <strong>PathwayEnrichment</strong><a class="headerlink" href="#pathwayenrichment" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>GOpathways.txt</strong> : This file contains the name of the enrich GO term as well as enrichment score.</p></li>
+<li><p><strong>GOenricher.txt</strong>  : This file contains the name of the differential genes within the enriched GO terms.</p></li>
+<li><p><strong>KEGGpathway.txt</strong>  : This file contains the name of the enrich KEGG pathways as well as enrichment score.</p></li>
+<li><p><strong>KEGGenricher.txt</strong>  : This file contains the name of the differential genes within the enriched KEGG pathways</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic" start="7">
+<li><p><strong>genomeBrowserFile</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>bam</strong>: Folder contain Binary alignment file (BAM) as well as  sorted and indexed BAM. Users are advised to use sorted.bam file for raw aligned file visulazation by genomic browser IGV</p></li>
+<li><p><strong>.wig</strong>: Single nucleotide visualization wiggle file for visualization or other purpose</p></li>
+<li><p><strong>.bw</strong> : Single nucleotide visualization Big wiggle file which is memory efficient for visualization</p></li>
+<li><p><strong>normalized.wig</strong>: Single nucleotide visualization normalized Big wiggle file if user wants to visually compare RNA-seq data of different library depth.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="plots">
+<h2>8. <strong>Plots</strong>:<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h2>
+<p>Contains all the plots generated by ProkSeq during analysis in pdf, png and tiff format.</p>
+</div>
+</div>
+<div class="section" id="installation-instruction-for-the-dependencies">
+<h1>INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:<a class="headerlink" href="#installation-instruction-for-the-dependencies" title="Permalink to this headline">¶</a></h1>
+<p>If one or any of the above dependencies are missing user can install it  by following the instructions below.</p>
+<div class="section" id="pyhton3">
+<h2>Pyhton3:<a class="headerlink" href="#pyhton3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Ubuntu
+Ubuntu 17.10, Ubuntu 18.04 (and above) come with Python 3.6 by default.
+Ubuntu 16.10 and 17.04 do not come with Python 3.6 by default, but it is in the Universe repository.
+You should be able to install it with the following commands:
+
+- sudo apt-get update
+- sudo apt-get install python3.6
+
+For Ubuntu 14.04 or 16.04, Python 3.6 is not in the Universe repository, and user do not need to get
+it from a Personal Package Archive (PPA). For example, to install Python from the “deadsnakes” PPA,
+do the following:
+- sudo apt-get update
+- sudo apt-get install python3.6
+
+#CentOS
+User should first update the system with the yum package manager:
+- sudo yum update
+- sudo yum install yum-utils
+Then install the CentOS IUS package
+- sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
+Then install Python and Pip:
+- sudo yum install python36u
+- sudo yum install python36u-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-of-r">
+<h2>Installation of R:<a class="headerlink" href="#installation-of-r" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">pipeline</span> <span class="ow">is</span> <span class="n">tested</span> <span class="n">on</span> <span class="n">R</span> <span class="n">version</span> <span class="mf">3.6</span><span class="o">.</span><span class="mf">0.</span>
+<span class="c1">#Installing R on Ubuntu 19.04/18.04/16.04</span>
+<span class="n">Before</span> <span class="n">installing</span> <span class="n">R</span><span class="p">,</span> <span class="n">user</span> <span class="n">need</span> <span class="n">to</span> <span class="n">update</span> <span class="n">the</span> <span class="n">system</span> <span class="n">package</span> <span class="n">index</span> <span class="ow">and</span> <span class="n">upgrade</span> <span class="nb">all</span>  <span class="n">installed</span> <span class="n">packages</span>
+<span class="n">using</span> <span class="n">the</span> <span class="n">following</span> <span class="n">two</span> <span class="n">commands</span><span class="p">:</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">apt</span> <span class="o">-</span><span class="n">y</span> <span class="n">upgrade</span>
+<span class="n">After</span> <span class="n">that</span><span class="p">,</span> <span class="n">run</span> <span class="n">the</span> <span class="n">following</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">command</span> <span class="n">line</span> <span class="n">to</span> <span class="n">install</span> <span class="n">base</span> <span class="n">R</span><span class="o">.</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">apt</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">r</span><span class="o">-</span><span class="n">base</span>
+<span class="c1"># Install R on CentOS 7</span>
+<span class="n">R</span> <span class="n">packages</span> <span class="n">are</span> <span class="n">available</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">EPEL</span> <span class="n">repositories</span><span class="o">.</span> <span class="n">It</span> <span class="n">can</span> <span class="n">be</span> <span class="n">installed</span> <span class="n">by</span> <span class="n">typing</span><span class="p">:</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span>
+
+<span class="n">Once</span> <span class="n">the</span> <span class="n">repository</span> <span class="ow">is</span> <span class="n">added</span><span class="p">,</span> <span class="n">install</span> <span class="n">R</span> <span class="n">by</span> <span class="n">typing</span><span class="p">:</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">R</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-of-r-bioconductor-packages">
+<h2>Installation of R Bioconductor packages:<a class="headerlink" href="#installation-of-r-bioconductor-packages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+        install.packages(&quot;BiocManager&quot;)
+
+edgeR:
+BiocManager::install(&quot;edgeR&quot;)
+DESeq2:
+BiocManager::install(&quot;DESeq2&quot;)
+NOISeq:
+BiocManager::install(&quot;NOISeq&quot;)
+limma:
+BiocManager::install(&quot;limma&quot;)
+clusterProfiler:
+BiocManager::install(&quot;clusterProfiler&quot;)
+apeglm:
+BiocManager::install(&quot;apeglm&quot;)
+RUVSeq:
+BiocManager::install(&quot;RUVSeq&quot;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="samtools">
+<h2>Samtools:<a class="headerlink" href="#samtools" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Ubuntu 18.04 or higher</span>
+<span class="n">Install</span> <span class="n">samtools</span> <span class="n">by</span> <span class="n">entering</span> <span class="n">the</span> <span class="n">following</span> <span class="n">commands</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">terminal</span><span class="p">:</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="o">-</span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">samtools</span>
+<span class="n">For</span> <span class="n">the</span> <span class="n">other</span> <span class="n">version</span> <span class="n">of</span> <span class="n">Ubuntu</span> <span class="ow">or</span> <span class="n">centose</span> <span class="n">use</span> <span class="n">the</span> <span class="n">samtools</span><span class="o">.</span><span class="n">sh</span> <span class="n">script</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">package</span> <span class="n">folder</span><span class="o">.</span> <span class="n">User</span> <span class="n">can</span>
+<span class="n">go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">PorkSeq</span> <span class="n">folder</span> <span class="ow">and</span> <span class="nb">open</span> <span class="n">a</span> <span class="n">terminal</span> <span class="ow">and</span> <span class="n">write</span> <span class="n">sh</span> <span class="n">samtools</span><span class="o">.</span><span class="n">sh</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">will</span> <span class="n">install</span> <span class="n">samtools</span>
+<span class="ow">in</span> <span class="n">the</span> <span class="n">samtools</span> <span class="n">directory</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>EXTERNAL TOOLS:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">following</span> <span class="n">tools</span><span class="o">.</span>
+<span class="mf">1.</span> <span class="n">FastQC</span> <span class="p">:</span> <span class="n">This</span> <span class="n">package</span> <span class="n">runs</span> <span class="n">the</span> <span class="n">quality</span> <span class="n">check</span>
+<span class="mf">2.</span> <span class="n">Bowtie</span> <span class="p">:</span> <span class="n">Needed</span> <span class="k">for</span> <span class="n">aligning</span> <span class="n">the</span> <span class="n">reads</span>
+<span class="mf">3.</span> <span class="n">Pypy</span> <span class="p">:</span> <span class="n">For</span> <span class="n">speed</span> <span class="ow">and</span> <span class="n">memory</span> <span class="n">usage</span> <span class="n">we</span> <span class="n">sometime</span> <span class="n">uses</span> <span class="n">pypy</span> <span class="n">an</span> <span class="n">alternative</span> <span class="n">implementation</span> <span class="n">of</span> <span class="n">python</span> <span class="mf">3.6</span>
+<span class="mf">4.</span> <span class="n">featureCounts</span> <span class="kn">from</span> <span class="nn">subread</span><span class="p">:</span> <span class="n">a</span> <span class="n">software</span> <span class="n">program</span> <span class="n">developed</span> <span class="k">for</span> <span class="n">counting</span> <span class="n">reads</span> <span class="n">to</span> <span class="n">genomic</span> <span class="n">features</span> <span class="n">such</span>
+<span class="k">as</span> <span class="n">genes</span><span class="p">,</span> <span class="n">exons</span><span class="p">,</span> <span class="n">promoters</span> <span class="ow">and</span> <span class="n">genomic</span> <span class="n">bins</span><span class="o">.</span>
+<span class="mf">5.</span> <span class="n">AfterQc</span><span class="p">:</span> <span class="n">Tools</span> <span class="k">for</span> <span class="n">automatic</span> <span class="n">filtering</span> <span class="n">trimming</span> <span class="n">of</span> <span class="n">the</span> <span class="n">fastq</span> <span class="n">sequences</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>To run the program the above mentions dependencies are essential. However, the executable binaries are bundled in the folder depend.
+For ubuntu 18.04 or higher version use sudo apt-get update | apt-get install python3-pandas to install pandas
+User can download the depend folder along with all the dependencies from the following link
+<a class="reference external" href="https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh">https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh</a>
+OR, follow the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">folder</span> <span class="n">named</span> <span class="n">depend</span>
+<span class="mf">2.</span> <span class="n">cd</span> <span class="n">depend</span>
+<span class="mf">3.</span> <span class="n">cp</span> <span class="o">../</span><span class="n">scripts</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">sh</span> <span class="o">.</span>
+<span class="mf">4.</span> <span class="n">sh</span> <span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>The depend foldr will be populated.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Soumyadeep Nandi, Firoj Mahmud
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXX-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
