@@ -1,6 +1,5 @@
 # prokseq-v2.0
-==============
-# ProkSeq
+
 ProkSeq is an automated RNA-seq data analysis package for Prokaryotic, where users can perform all the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis. It has a wide variety of options for differential expression, normalized expression, visualization, and
 quality control, and publication-quality figures. It is also less time consuming as the user does not need to observe and control the analysis process. The user needs to specify the descriptions of the samples and define the parameter file accordingly. ProkSeq also automatically do the quality filtering of the bad reads and run the analysis on good quality reads.
 
@@ -14,11 +13,11 @@ DOCKER:
 We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1
 
 **Step 1:** To pull the image from the Docker Hub registry:
-> docker pull snandids/prokseq-v2.1:v1
+    docker pull snandids/prokseq-v2.1:v1
 
 **Step 2:** To Run:
-> docker run -it snandids/prokseq-v2.1:v1
-> sh-5.0# cd prokseq
+    docker run -it snandids/prokseq-v2.1:v1
+    sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
 > sh-5.0# source /etc/profile.d/conda.sh
