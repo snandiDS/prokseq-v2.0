@@ -28,38 +28,48 @@ samtools(){
 echo "Fetching bowtie2"
 mkdir bowtie2
 cd bowtie2
+rm bowtie2-2.3.5.1-linux-x86_64.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/bowtie2-2.3.5.1-linux-x86_64.zip
 unzip bowtie2-2.3.5.1-linux-x86_64.zip
 cd ../
 echo "Fetching SALMON"
+rm salmon-1.1.0_linux_x86_64.tar.gz
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/salmon-1.1.0_linux_x86_64.tar.gz
 tar -xvzf salmon-1.1.0_linux_x86_64.tar.gz
 echo "Fetching pypy"
+rm python2.7.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/python2.7.zip
 unzip python2.7.zip
 mv python2.7/pypy2.7-v7.2.0-linux64.tar .
 tar -xvf pypy2.7-v7.2.0-linux64.tar
 rm -rf python2.7
+rm pyhton3.6.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/pyhton3.6.zip
 unzip pyhton3.6.zip
 mv pyhton3.6/pypy3.6-v7.2.0-linux64.tar .
 tar -xvf pypy3.6-v7.2.0-linux64.tar
 rm -rf pyhton3.6
 echo "Fetching RSeQC"
+rm RSeQC-2.6.2.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/RSeQC-2.6.2.zip
 unzip RSeQC-2.6.2.zip 
 echo "Fetching subread"
+rm subread-1.4.6-p5-Linux-i386.tar.gz
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/subread-1.4.6-p5-Linux-i386.tar.gz
 tar -xvzf subread-1.4.6-p5-Linux-i386.tar.gz
 echo "Fetching samtools-1.10"
+rm samtools-1.10.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/samtools-1.10.zip
 unzip samtools-1.10.zip
 echo "Fetching afterQC"
+rm afterqc.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/afterqc.zip
 unzip afterqc.zip
 echo "Fetching FastQC"
+rm FastQC.zip
 wget http://www.fallmanlab.org/wp-content/uploads/2020/06/FastQC.zip
 unzip FastQC.zip
+chmod 755 FastQC/fastqc 
 while true; do
    read -p "Do you wish to compile samtools [Y/N]?" yn
    case $yn in
