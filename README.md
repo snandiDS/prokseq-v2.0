@@ -546,7 +546,7 @@ Depending on the file names provided in the parameter file for the 'Featurecount
         - **countFile_TPM_CPM.csv** : The file contains total count according to genomic features as well as Count 
           per miillion(CPM), and Transcript per million (TPM)
         - **countFile.NucleotideAvgCount.csv** : THis file contains Average nucleotide expression per gene as well
-	  as other total count, CPM and TPM.
+          as other total count, CPM and TPM.
 
 
 5. **DiffExpResults**:
@@ -568,11 +568,11 @@ Depending on the file names provided in the parameter file for the 'Featurecount
 7. **genomeBrowserFile**:
 
         - **bam**: Folder contain Binary alignment file (BAM) as well as  sorted and indexed BAM. Users are advised
-	  to use sorted.bam file for raw aligned file visulazation by genomic browser IGV 
+          to use sorted.bam file for raw aligned file visulazation by genomic browser IGV 
         - **.wig**: Single nucleotide visualization wiggle file for visualization or other purpose
         - **.bw** : Single nucleotide visualization Big wiggle file which is memory efficient for visualization
-        - **normalized.wig**: Single nucleotide visualization normalized Big wiggle file if user wants to visually
-	  compare RNA-seq data of different library depth.
+        - **normalized.wig**: Single nucleotide visualization normalized Big wiggle file if user wants to visually 
+          compare RNA-seq data of different library depth.
                                  
 8. **Plots**:
 
