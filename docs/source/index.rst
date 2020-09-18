@@ -219,6 +219,8 @@ Default directory layout should look like below:
 
         .
         ./README.md
+        ./depend/setup.sh
+        ./depend/README
         ./depend/afterqc
         ./depend/bowtie2
         ./depend/FastQC
@@ -232,7 +234,7 @@ Default directory layout should look like below:
         ./depend/wigToBigWig
         ./scripts/prokseq.py
         ./scripts/runCheck.py
-        ./scripts/prokseq-vT1.py
+        ./scripts/GraphicalAbstractProkSeq.png
         ./scripts/plotScript.R
         ./scripts/gff3_2_gtf.sh
         ./scripts/gtf2bed.sh
@@ -274,6 +276,7 @@ Example files layout:
         ./oldAnnotationGFF.gtf
         ./orf_coding_all.fasta
         ./SequenceChromosome.fasta
+        ./testFile.bgl
 
 
 REQUIRMENTS:
