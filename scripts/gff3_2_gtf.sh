@@ -66,7 +66,8 @@ while getopts ':hf:' option; do
 done
 shift $((OPTIND - 1))
 
-awk '{if($3=="gene") print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9}' $gffF |sed -e 's/ID=gene-/gene_id\t/' -e 's/;Name=/ Name\t/' -e 's/;.*//' > _tempGTF
+#awk '{if($3=="gene") print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9}' $gffF |sed -e 's/ID=gene-/gene_id\t/' -e 's/;Name=/ Name\t/' -e 's/;.*//' > _tempGTF
+awk '{if($3=="gene") print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9}' $gffF |sed -e 's/ID=/gene_id\t/' -e 's/;Name=/ Name\t/' -e 's/;.*//' > _tempGTF
 #sed -i -e 's/"//g' -e 's/;//g' _tempGTF
 cat _tempGTF
 rm _tempGTF

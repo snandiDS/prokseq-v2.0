@@ -4,7 +4,8 @@ import re
 from libmod import pipeFunc as fn
 from libmod import execCmd as ec
 
-def check(paramFile):
+def check(Inp):
+   '''
    paramFastqcPath=""
    paramBowtiePath=""
    paramRootPath=""
@@ -15,59 +16,18 @@ def check(paramFile):
    paramFeatCntPath=""
    paramReadFastaPath=""
    default=0
+   '''
 
-   """    READING PARAMETER FILE
-          ----------------------"""
-   fo = open(paramFile, "r")
-   while True:
-      line = fo.readline()
-      if not line:
-         break
-      if line.startswith('#'):
-         continue
-      if (re.search("^PATH FASTQC", line)):
-         param = line.split()
-         paramFastqcPath = param[2]
-      if (re.search("^PATH BOWTIE", line)):
-         param = line.split()
-         paramBowtiePath = param[2]
-      if (re.search("^PATH ROOT", line)):
-         param = line.split()
-         paramRootPath = param[2]
-      if (re.search("^PATH PYPY", line)):
-         param = line.split()
-         paramPYPYPath = param[2]
-      if (re.search("^PATH SAMTOOLS", line)):
-         param = line.split()
-         paramSAMTOOLSPath = param[2]
-      if (re.search("^PATH SALMON", line)):
-         param = line.split()
-         paramSalmonPath = param[2]
-      if (re.search("^PATH geneBody_coverage", line)):
-         param = line.split()
-         paramGnBdCovPath = param[2]
-      if (re.search("^PATH FEATURECOUNTS", line)):
-         param = line.split()
-         paramFeatCntPath = param[2]
-      if (re.search("^PATH READFASTA", line)):
-         param = line.split()
-         paramReadFastaPath = param[2]
-      if (re.search("^PATH DEFAULT", line)):
-         default=1
-         break
-   fo.close()
-   """-------END OF READING PARAMETER FILE--------"""
-
-   if(default):
+   if(Inp['default']):
       #paramFastqcPath = paramBowtiePath = paramPYPYPath = paramRootPath + "/depend"
-      paramFastqcPath = paramRootPath + "/depend/FastQC"
-      paramBowtiePath = paramRootPath + "/depend/bowtie2/bowtie2-2.3.5.1-linux-x86_64"
-      paramPYPYPath = paramRootPath + "/depend/pypy2.7-v7.2.0-linux64/bin"
-      paramReadFastaPath = paramRootPath + "/depend"
-      paramSAMTOOLSPath = paramRootPath + "/depend/samtools/bin"
-      paramSalmonPath = paramRootPath + "/depend/salmon-latest_linux_x86_64/bin"
-      paramGnBdCovPath = paramRootPath + "/depend/RSeQC-2.6.2/scripts/"
-      paramFeatCntPath = paramRootPath + "/depend/subread-1.4.6-p5-Linux-i386/bin/"
+      Inp['paramFastqcPath'] = Inp['paramRootPath'] + "/depend/FastQC"
+      Inp['paramBowtiePath'] = Inp['paramRootPath'] + "/depend/bowtie2/bowtie2-2.3.5.1-linux-x86_64"
+      Inp['paramPYPYPath'] = Inp['paramRootPath'] + "/depend/pypy2.7-v7.2.0-linux64/bin"
+      Inp['paramReadFastaPath'] = Inp['paramRootPath'] + "/depend"
+      Inp['paramSAMTOOLSPath'] = Inp['paramRootPath'] + "/depend/samtools/bin"
+      Inp['paramSalmonPath'] = Inp['paramRootPath'] + "/depend/salmon-latest_linux_x86_64/bin"
+      Inp['paramGnBdCovPath'] = Inp['paramRootPath'] + "/depend/RSeQC-2.6.2/scripts/"
+      Inp['paramFeatCntPath'] = Inp['paramRootPath'] + "/depend/subread-1.4.6-p5-Linux-i386/bin/"
 
    #root=['/usr/local/bin','/usr/bin']
    root=['/usr/bin','/usr/local/bin']
@@ -86,18 +46,18 @@ def check(paramFile):
    print("\nChecking required tools or packages:\n")
    if(fn.checkTools("/usr/bin","samtools")==0):
       if(fn.checkTools("/usr/local/bin","samtools")==0):
-         tools['samtools'] = fn.checkTools(paramSAMTOOLSPath,"samtools")
-   tools['salmon'] = fn.checkTools(paramSalmonPath,"salmon")
-   tools['fastqc'] = fn.checkTools(paramFastqcPath,"fastqc")
-   tools['bowtie'] = fn.checkTools(paramBowtiePath,"bowtie")
-   tools['afterqc'] = fn.checkTools(paramPYPYPath,"afterqc")
-   tools['GnBdCov'] = fn.checkTools(paramGnBdCovPath,"GnBdCov")
-   tools['FeatCnt'] = fn.checkTools(paramFeatCntPath,"FeatCnt")
+         tools['samtools'] = fn.checkTools(Inp['paramSAMTOOLSPath'],"samtools")
+   tools['salmon'] = fn.checkTools(Inp['paramSalmonPath'],"salmon")
+   tools['fastqc'] = fn.checkTools(Inp['paramFastqcPath'],"fastqc")
+   tools['bowtie'] = fn.checkTools(Inp['paramBowtiePath'],"bowtie")
+   tools['afterqc'] = fn.checkTools(Inp['paramPYPYPath'],"afterqc")
+   tools['GnBdCov'] = fn.checkTools(Inp['paramGnBdCovPath'],"GnBdCov")
+   tools['FeatCnt'] = fn.checkTools(Inp['paramFeatCntPath'],"FeatCnt")
    fo = open("test.fasta", "w")
    fo.write(">test\n")
    fo.write("ATGCGATCGTA\n")
    fo.close()
-   tools['readFasta'] = fn.checkTools(paramReadFastaPath,"readFasta")
+   tools['readFasta'] = fn.checkTools(Inp['paramReadFastaPath'],"readFasta")
    for i in range (0,len(root),1):
       tools['R'] = fn.checkTools(root[i],"R")
       if tools['R']:
@@ -125,7 +85,7 @@ def check(paramFile):
             misPkg += 1
 
    print("\nChecking R packages:\n")
-   rPkgs = ['DESeq2','ggplot2','edgeR','NOISeq','limma','clusterProfiler','apeglm']
+   rPkgs = ['DESeq2','ggplot2','edgeR','NOISeq','limma','clusterProfiler','apeglm','RUVSeq','RColorBrewer']
    misRpkg = fn.checkRTools(rPkgs)
 
 
