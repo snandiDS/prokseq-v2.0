@@ -509,15 +509,15 @@ ProkSeq produces several folder with analysis results as a Output folder.
 
 The structure of the Output directory looks like
 
+        
+        QC_preFilter
+        QC_afterFilter
         alignmentFile
-        bam
         countAndExpression
         DiffExpResults
-        genomeBrowserFile
         PathwayEnrichment
+        genomeBrowserFile
         plots
-        QC_afterFilter
-        QC_preFilter
 
 
 1. **QC_preFilter**:
