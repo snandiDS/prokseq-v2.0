@@ -113,7 +113,7 @@ To remove the container.::
 Output (somewhat similar)
 
 .. code-block:: 
-   :linenos:
+   :linenos: 10
 
     CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS                    PORTS               NAMES
     8f780c0a9969        snandids/prokseq-v2.1:v1   "sh"                5 minutes ago       Up 5 minutes                                  fervent_feynman
