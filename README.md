@@ -20,11 +20,11 @@ We strongly recommend using docker to run the pipeline. The external dependencie
 > sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
-> sh-5.0# source /etc/profile.d/conda.sh
-> sh-5.0# conda activate py36
+> sh-5.0# source /etc/profile.d/conda.sh <br/>
+> sh-5.0# conda activate py36 <br/>
 > (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
 
-**Step 4:** Run the example
+**Step 4:** Run the example <br/>
 Run the pipeline with the example files:
 > (py36) sh-5.0# python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
 
@@ -43,13 +43,11 @@ Exit from the existing docker and mount the container with a volume.<br/>
 
 Assuming the user has all the required data files (sample[fq/fastq], GTF, BED, genome/transcript files, etc) in the folder `/home/user/prokseqData`, the above command will mount the directory `/home/user/prokseqData` in `/root/prokseq/` inside container.<br/>
 User can run the pipeline with appropriate sample files and parameter files inside the docker. 
-> sh-5.0# cd prokseq
-
-> sh-5.0# source /etc/profile.d/conda.sh
-
-> sh-5.0# conda activate py36
-
-> (py36) sh-5.0# <YOU WILL GET THIS PROMPT>
+> sh-5.0# cd prokseq <br/>
+> sh-5.0# source /etc/profile.d/conda.sh <br/>
+> sh-5.0# conda activate py36 <br/>
+> (py36) sh-5.0#  <br/>
+YOU WILL GET THIS PROMPT
 
 *Modify the parameter file with appropriate path and desired parameters.<br/>
 Modify the sample file with the fastq file names and the genome/transcript file names.*
@@ -96,8 +94,7 @@ CONDA:
 > conda install -p <PATH_TO_DOWNLOAD> -c <CHANNEL> prokseq
 
 Example:
-> mkdir testPrseq
-
+> mkdir testPrseq <br/>
 > conda install -p /home/user/testPrseq -c snandids prokseq
 
 **Step 2:** Once the package is obtained, run the following commands.
@@ -113,16 +110,11 @@ Install the R and the R bioconductor packages.
 Though the pipeline is written in Python3.6, but some packages included in the pipeline require Python2.7. Therefore, it is advised to install Python2. The program should find python2 and python (python3) in the env PATH. To make life easier, we recommend create environment (Step 4).
 
 **Step 4:** Create virtual environment
-> conda create -n yourenvname python=3.6
-
-> conda activate yourenvname
-
-> conda install pandas
-
-> pip2.7 install numpy
-
-> pip2 install qc bitsets RSeQC
-
+> conda create -n yourenvname python=3.6 <br/>
+> conda activate yourenvname <br/>
+> conda install pandas <br/>
+> pip2.7 install numpy <br/>
+> pip2 install qc bitsets RSeQC <br/>
 > pip2 install --upgrade cython bx-python pysam RSeQC numpy
 
 **Step 5:**
@@ -156,6 +148,8 @@ Default directory layout should look like below:
 ------------------------------------------------
         .
         ./README.md
+	./depend/setup.sh
+	./depend/README
         ./depend/afterqc
         ./depend/bowtie2
         ./depend/FastQC
@@ -169,8 +163,8 @@ Default directory layout should look like below:
         ./depend/wigToBigWig
         ./scripts/prokseq.py
         ./scripts/runCheck.py
-        ./scripts/prokseq-vT1.py
-        ./scripts/plotScript.R
+        ./scripts/GraphicalAbstractProkSeq.png
+	./scripts/plotScript.R
         ./scripts/gff3_2_gtf.sh
         ./scripts/gtf2bed.sh
         ./scripts/setup.sh
@@ -207,6 +201,9 @@ Example files layout:
         ./oldAnnotationGFF.gtf
         ./orf_coding_all.fasta
         ./SequenceChromosome.fasta
+	./data/TERM2GENE.csv
+	./data/TERM2NAME.csv
+	./testFile.bgl
 
 
 REQUIRMENTS:
@@ -508,6 +505,95 @@ All these files should be declared in SAMPLE FILE and PARAMETER file.
 
 OUTPUT:
 =======
+ProkSeq produces several folder with analysis results as a Output folder.
+
+The structure of the Output directory looks like
+
+.. code-block::
+
+   alignmentFile
+   bam
+   countAndExpression
+   DiffExpResults
+   genomeBrowserFile
+   PathwayEnrichment
+   plots
+   QC_afterFilter
+   QC_preFilter
+
+
+1. **QC_preFilter**:
+--------------------
+    - fastQC out put html file
+
+
+2. **QC_afterFilter**:
+----------------------
+
+ Remove bad quality read and filter good quality reads. It contains three subfolder
+
+                 - **FilteredReads**: good quality filtered fastq files
+
+                 - **QCfastQ_filtered** : quality checking html file of filtered reads
+
+                 - **RemovedReads**: Bad quality reads that is removed for analysis
+
+3. **alighmentFile**:
+---------------------
+
+                - **.sam**: Sequence Alignment file generated from bowtie2/salmon
+
+                - **sam.alignSummary**: Alignment summary information/statistics of the alignment of individual sample to the reference genome.
+
+4. **countAndExpression**:
+--------------------------
+
+Depending on the file names provided in the parameter file for the 'Featurecounts output file' and 'COUNTFILE'.
+
+                - **Count.csv** : The file contains total count according to genomic features
+
+                - **countFile_TPM_CPM.csv** : The file contains total count according to genomic features as well as Count per miillion(CPM), and Transcript per million (TPM)
+
+                - **countFile.NucleotideAvgCount.csv** : THis file contains Average nucleotide expression per gene as well as other total count, CPM and TPM.
+
+
+5. **DiffExpResults**:
+----------------------
+
+                - **DESeq2_results.txt**: Differential expression results from DESeq2
+
+                - **DESeq2lfcShrink_results**: Differential expression results from DESeq2 with Log2 Fold Shrinkage
+
+                - **edgeR_results.txt**: Differential expression results from edgeR
+
+                - **afterNoiseq.txt**: Differential expression results from NOISeq
+
+                - **RUV_DESeq2_results.txt**: Differential expression results with RUV normalization by using RUVSeq and DESeq2
+
+
+6. **PathwayEnrichment**
+------------------------
+
+                - **GOpathways.txt** : This file contains the name of the enrich GO term as well as enrichment score. 
+                - **GOenricher.txt**  : This file contains the name of the differential genes within the enriched GO terms.
+                - **KEGGpathway.txt**  : This file contains the name of the enrich KEGG pathways as well as enrichment score. 
+                - **KEGGenricher.txt**  : This file contains the name of the differential genes within the enriched KEGG pathways
+
+7. **genomeBrowserFile**:
+-------------------------
+
+                - **bam**: Folder contain Binary alignment file (BAM) as well as  sorted and indexed BAM. Users are advised to use sorted.bam file for raw aligned file visulazation by genomic browser IGV 
+                - **.wig**: Single nucleotide visualization wiggle file for visualization or other purpose
+
+                - **.bw** : Single nucleotide visualization Big wiggle file which is memory efficient for visualization
+
+                - **normalized.wig**: Single nucleotide visualization normalized Big wiggle file if user wants to visually compare RNA-seq data of different library depth.
+                                 
+8. **Plots**:
+-------------
+Contains all the plots generated by ProkSeq during analysis in pdf, png and tiff format.
+
+
 __*UPDATE REQD*__
 
 
