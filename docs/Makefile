@@ -5,13 +5,8 @@
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
-<<<<<<< HEAD
 SOURCEDIR     = source
 BUILDDIR      = build
-=======
-SOURCEDIR     = .
-BUILDDIR      = _build
->>>>>>> e35c0f4cae0ee639b15bab3c680488f5de628a4d
 
 # Put it first so that "make" without argument is like "make help".
 help:
