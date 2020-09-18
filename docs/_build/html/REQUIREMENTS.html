@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="english">
+  <head>
+    <meta charset="utf-8" />
+    <title>REQUIRMENTS: &#8212; ProkSeq 20.08.2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SAMPLE FILE:" href="SAMPLES FILE.html" />
+    <link rel="prev" title="INSTALLATION AND DEPENDENCIES:" href="INSTALLATION AND DEPENDENCIES.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="requirments">
+<h1>REQUIRMENTS:<a class="headerlink" href="#requirments" title="Permalink to this headline">¶</a></h1>
+<p>Users can run the ProkSeq program to see which depending packages are missing. By default, ProkSeq will search for required programs and
+print the availability of the program.</p>
+<p>ProkSeq requires the following packages:</p>
+<div class="section" id="external-tools">
+<h2>EXTERNAL TOOLS:<a class="headerlink" href="#external-tools" title="Permalink to this headline">¶</a></h2>
+<p><strong>Package/program   : Purpose</strong></p>
+<p><strong>FastQC</strong>          : Quality check</p>
+<p><strong>Bowtie</strong>          : Aligning the reads</p>
+<p><strong>Pypy</strong>            : For speed and memory usage we sometimes uses pypy an alternative implementation of python 3.6</p>
+<p><strong>featureCounts</strong>   : Counting reads to genomic features such as genes, exons, promoters, and genomic bins.</p>
+<p><strong>AfterQc</strong>         : Automatic filtering trimming of the fastq sequences.</p>
+<p><strong>Samtools</strong>        : For post-processing of the SAM and BAM reads alignment files.</p>
+<p><strong>Salmon</strong>          : A tool for wicked-fast transcript quantification from RNA-seq data.</p>
+<p>The dependencies mentioned above are essential. However, the executable binaries
+are bundled in the folder &quot;depend&quot;. If the user is fetching the package from</p>
+<p>github [<a class="reference external" href="https://github.com/snandiDS/prokseq-v2.1">https://github.com/snandiDS/prokseq-v2.1</a>], then the user will get a</p>
+<p>script [setup.sh] inside the depend folder.</p>
+<p><strong>Please run this script as</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">setup.sh</span></code></p>
+</div></blockquote>
+<p>This script will fetch the required dependencies from <a class="reference external" href="http://www.fallmanlab.org">http://www.fallmanlab.org</a>.
+The script will also ask if the user wants to compile samtools.
+After running the script and accepting Y for compiling the samtools, the output
+on the screen would be as follows:</p>
+<blockquote>
+<div><p><strong>-- Viewing</strong></p>
+<blockquote>
+<div><p>flags         : explain BAM flags</p>
+<p>tview         : text alignment viewer</p>
+<p>view          : SAM&lt;-&gt;BAM&lt;-&gt;CRAM conversion</p>
+<p>depad         : convert padded BAM to unpadded BAM</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>This means the program ran successfully.</strong></p>
+</div>
+<div class="section" id="r-packages">
+<h2>R packages:<a class="headerlink" href="#r-packages" title="Permalink to this headline">¶</a></h2>
+<p><strong>R packages</strong>  :<strong>Purpose</strong></p>
+<p>ggplot2         : A system for declaratively creating graphics, based on The Grammar of Graphics.</p>
+<p><strong>Bioconductor Packages:  Purpose</strong></p>
+<p>DESeq2          :       Differential gene expression analysis based on the negative binomial distribution.</p>
+<p>edgeR           :       Package for examining differential expression of replicated count data.</p>
+<p>NOISeq          :       A non-parametric approach for the differential expression analysis of RNseq-data.</p>
+<p>limma           :       A package for the analysis of gene expression data arising from microarray or RNA-seq technologies.</p>
+<p>clusterProfiler :       To analyze functional profiles of genomic coordinates (supported by ChIPseeker), gene and gene clusters.</p>
+<p>apeglm          :       The adaptive t prior shrinkage estimator used to Shrink log2 fold changes.</p>
+<p>RUVSeq          :       Remove Unwanted Variation from RNA-Seq Data</p>
+<p>RColorBrewer    :       Required to create nice looking color palettes especially for thematic maps, used with RUVSeq.</p>
+</div>
+<div class="section" id="python-libraries">
+<h2>PYTHON LIBRARIES:<a class="headerlink" href="#python-libraries" title="Permalink to this headline">¶</a></h2>
+<p><strong>This program is written in python 3.6, and uses the following python libraries. os, subprocess, re, pandas, optparse, math, threading. These libraries may be installed using pip.</strong></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ProkSeq</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="INSTALLATION AND DEPENDENCIES.html">INSTALLATION AND DEPENDENCIES:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">REQUIRMENTS:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#external-tools">EXTERNAL TOOLS:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r-packages">R packages:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-libraries">PYTHON LIBRARIES:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html">SAMPLE FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAMPLES FILE.html#data-files">DATA FILES:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PARAMETER FILE.html">PARAMETER FILE:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RUNNING PROKSEQ.html">RUNNING PROKSEQ:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCKER.html">DOCKER:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONDA.html">DOCKER:</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="INSTALLATION AND DEPENDENCIES.html" title="previous chapter">INSTALLATION AND DEPENDENCIES:</a></li>
+      <li>Next: <a href="SAMPLES FILE.html" title="next chapter">SAMPLE FILE:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, S.nandi, Firoj mahmud.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/REQUIREMENTS.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
