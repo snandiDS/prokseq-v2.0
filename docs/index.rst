@@ -213,16 +213,17 @@ After setting up of the depend directory, one can check if the environment is al
 
 Default directory layout should look like below:
 ================================================
-
-.. code-block:: 
-   :linenos:  
-
-        .
+::
         ./README.md
+	
         ./depend/setup.sh
+	
         ./depend/README
+	
         ./depend/afterqc
+	
         ./depend/bowtie2
+	
         ./depend/FastQC
         ./depend/pypy2.7-v7.2.0-linux64
         ./depend/readFasta
