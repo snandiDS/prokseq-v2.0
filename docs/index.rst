@@ -112,8 +112,7 @@ To remove the container.::
 
 Output (somewhat similar)
 
-.. code-block:: 
-   :linenos: 10
+::
 
     CONTAINER ID        IMAGE                      COMMAND             CREATED             STATUS                    PORTS               NAMES
     8f780c0a9969        snandids/prokseq-v2.1:v1   "sh"                5 minutes ago       Up 5 minutes                                  fervent_feynman
@@ -183,10 +182,9 @@ Once all the dependencies and R packages are installed, and the example files ar
 
 *For example:* If you are using the above-mentioned path `[/home/user/testPrseq]` from **Step 1**, then specify the path as below for all the packages in the parameter file.
 
-.. code-block:: 
-   :linenos:
+::
 
-              #       Specify the path to pypy required for running afterqc
+#       Specify the path to pypy required for running afterqc
               PATH PYPY /home/path/testPrseq/depend/pypy2.7-v7.2.0-linux64/bin
 
 Then run the following command to test run the pipeline.::
@@ -333,13 +331,13 @@ R packages:
 
 ::
 
-        R packages      :       Purpose
-        --------                -------
+        **R packages**  :       **Purpose**
+        
         ggplot2         :       A system for declaratively creating graphics,
                                 based on The Grammar of Graphics.
 
-        Bioconductor Packages:  Purpose
-        ---------------------   -------
+        **Bioconductor Packages** :  **Purpose**
+        
         DESeq2          :       Differential gene expression analysis based
                                 on the negative binomial distribution.
         edgeR           :       Package for examining differential expressi-
@@ -373,7 +371,7 @@ SYNTAX:
 
 :: 
 
-        Usage: prokseq.py [options] arg
+Usage: prokseq.py [options] arg
 
         Options:
           -h, --help            show this help message and exit
@@ -388,6 +386,7 @@ SYNTAX:
 
 EXAMPLE:
 --------
+
 ::
 
     python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
@@ -401,8 +400,7 @@ PARAMETER FILE:
 
 There should be one parameter file. The entries of the file should be as follows.
 
-.. code-block:: 
-   :linenos:  
+::
 
         ####################################################################
         #       File "param.yaml" - definition file in YAML format. Define
@@ -520,8 +518,7 @@ SAMPLE FILE:
 
 Sample file is required for the program. This file should have the following format. Please don't change the format of the file. Simply replace the fastq, sam and the conditions of the sample.
 
-.. code-block:: 
-   :linenos:  
+::  
 
         ###################################################################################
         #       File "sample" - sample description file
@@ -550,8 +547,7 @@ Sample file is required for the program. This file should have the following for
 
 In case of SALMON:
 
-.. code-block:: 
-   :linenos:  
+::  
 
         ###################################################################################
         #       File "sample" - sample description file
@@ -581,7 +577,7 @@ In case of SALMON:
 DATA FILES:
 ===========
 
-.. code-block:: 
+:: 
 
         1. Samples files in fastq format.
         2. Pathway analysis (Optional):
@@ -610,7 +606,7 @@ ProkSeq produces several folder with analysis results as a Output folder.
 
 The structure of the Output directory looks like
 
-.. code-block::
+::
 
    alignmentFile
    bam
@@ -702,7 +698,7 @@ If one or any of the above dependencies are missing user can install it  by foll
 Pyhton3:
 --------
 
-.. code-block:: 
+::
 
         #Ubuntu
         Ubuntu 17.10, Ubuntu 18.04 (and above) come with Python 3.6 by default.
@@ -731,7 +727,7 @@ Pyhton3:
 Installation of R:
 ------------------
 
-.. code-block:: 
+:: 
 
         The pipeline is tested on R version 3.6.0.
         #Installing R on Ubuntu 19.04/18.04/16.04
@@ -751,7 +747,7 @@ Installation of R:
 Installation of R Bioconductor packages:
 ----------------------------------------
 
-.. code-block:: 
+:: 
 
         if (!requireNamespace("BiocManager", quietly = TRUE))
                 install.packages("BiocManager")
@@ -774,7 +770,7 @@ Installation of R Bioconductor packages:
 Samtools:
 ---------
 
-.. code-block:: 
+:: 
 
         #Ubuntu 18.04 or higher
         Install samtools by entering the following commands in the terminal:
@@ -787,7 +783,7 @@ Samtools:
 EXTERNAL TOOLS:
 ---------------
 
-.. code-block:: 
+:: 
 
         This program uses the following tools.
         1. FastQC : This package runs the quality check
@@ -803,7 +799,7 @@ User can download the depend folder along with all the dependencies from the fol
 https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh
 OR, follow the following:
 
-.. code-block:: 
+:: 
 
         1. Create a folder named depend
         2. cd depend
