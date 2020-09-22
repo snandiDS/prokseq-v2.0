@@ -289,7 +289,7 @@ ProkSeq requires the following packages:
 EXTERNAL TOOLS:
 ---------------
 
-.. code-block:: 
+:: 
 
         Package/program :       Purpose
         ---------------         -------
@@ -321,7 +321,7 @@ The script will also ask if the user wants to compile samtools.
 After running the script and accepting Y for compiling the samtools, the output
 on the screen would be as follows:
 
-.. code-block:: 
+:: 
 
         -- Viewing
            flags          explain BAM flags
