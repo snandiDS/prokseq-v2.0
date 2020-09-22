@@ -213,17 +213,14 @@ After setting up of the depend directory, one can check if the environment is al
 
 Default directory layout should look like below:
 ================================================
+
 ::
+
         ./README.md
-	
         ./depend/setup.sh
-	
         ./depend/README
-	
         ./depend/afterqc
-	
         ./depend/bowtie2
-	
         ./depend/FastQC
         ./depend/pypy2.7-v7.2.0-linux64
         ./depend/readFasta
@@ -252,8 +249,7 @@ Default directory layout should look like below:
 Example files layout:
 =====================
 
-.. code-block:: 
-   :linenos:  
+::
 
         ./sampleCtrl_1.R1.fq
         ./sampleCtrl_1.R2.fq
@@ -335,7 +331,7 @@ This means the program ran successfully.
 R packages:
 -----------
 
-.. code-block:: 
+::
 
         R packages      :       Purpose
         --------                -------
@@ -375,7 +371,7 @@ RUNNING PROKSEQ:
 SYNTAX:
 -------
 
-.. code-block:: 
+:: 
 
         Usage: prokseq.py [options] arg
 
