@@ -184,8 +184,8 @@ Once all the dependencies and R packages are installed, and the example files ar
 
 ::
 
-#       Specify the path to pypy required for running afterqc
-              PATH PYPY /home/path/testPrseq/depend/pypy2.7-v7.2.0-linux64/bin
+    #       Specify the path to pypy required for running afterqc
+    PATH PYPY /home/path/testPrseq/depend/pypy2.7-v7.2.0-linux64/bin
 
 Then run the following command to test run the pipeline.::
 
@@ -608,15 +608,14 @@ The structure of the Output directory looks like
 
 ::
 
+   QC_preFilter
+   QC_afterFilter
    alignmentFile
-   bam
    countAndExpression
    DiffExpResults
-   genomeBrowserFile
    PathwayEnrichment
-   plots
-   QC_afterFilter
-   QC_preFilter
+   genomeBrowseFile
+   Plots
 
 
 1. **QC_preFilter**:
