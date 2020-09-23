@@ -676,6 +676,7 @@ Depending on the file names provided in the parameter file for the 'Featurecount
                 - **KEGGenricher.txt**  : This file contains the name of the differential genes within the enriched KEGG pathways
 
 7. **genomeBrowserFile**:
+----------------------------
 
                 - **bam**: Folder contain Binary alignment file (BAM) as well as  sorted and indexed BAM. Users are advised to use sorted.bam file for raw aligned file visulazation by genomic browser IGV 
                 - **.wig**: Single nucleotide visualization wiggle file for visualization or other purpose
