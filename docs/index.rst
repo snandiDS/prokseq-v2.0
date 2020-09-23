@@ -806,17 +806,9 @@ OR, follow the following:
         3. cp ../scripts/setup.sh .
         4. sh setup.sh
 
-The depend foldr will be populated.
+The depend folder will be populated.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
