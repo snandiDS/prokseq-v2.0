@@ -643,7 +643,8 @@ OTHER SUPPORTING PROGRAMS:
 		 2. Create the plot with graphics command
 		 3. Close the file with the call dev.off()
 		 
-             EXAMPLE [PNG, jpeg, tiff]:
+             EXAMPLE:
+	     [PNG, jpeg, tiff]:
 	        png(file="myplot.png",width=400,height=350,res=1200)
                 plot(x,y,main="EXAMPLE PLOT")
                 dev.off()
