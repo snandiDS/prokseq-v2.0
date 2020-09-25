@@ -20,21 +20,21 @@ quality control, and publication-quality figures. It is also less time consuming
 DOWNLOAD:
 =========
 The pipeline can be obtained from the following repositories.
-`[GitHub] <https://github.com/snandiDS/prokseq-v2.1>`_, `[Docker] <https://hub.docker.com/repository/docker/snandids/prokseq-v2.1>`_, and `[Anaconda Cloud] <https://anaconda.org/snandiDS/prokseq>`_.
+`[GitHub] <https://github.com/snandiDS/prokseq-v2.0>`_, `[Docker] <https://hub.docker.com/repository/docker/snandids/prokseq-v2.0>`_, and `[Anaconda Cloud] <https://anaconda.org/snandiDS/prokseq>`_.
 
 DOCKER:
 -------
-We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.1:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.1
+We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
 
 **Step 1:** To pull the image from the Docker Hub registry::
 
-    docker pull snandids/prokseq-v2.1:v1
+    docker pull snandids/prokseq-v2.0:v1
     
 **Step 2:** To Run
 
 .. code-block:: bash
 
-    docker run -it snandids/prokseq-v2.1:v1
+    docker run -it snandids/prokseq-v2.0:v1
     sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
@@ -271,6 +271,8 @@ Example files layout:
         ./oldAnnotationGFF.gtf
         ./orf_coding_all.fasta
         ./SequenceChromosome.fasta
+        ./data/TERM2GENE.csv
+        ./data/TERM2NAME.csv
         ./testFile.bgl
 
 
