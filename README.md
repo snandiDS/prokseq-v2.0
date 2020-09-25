@@ -593,6 +593,65 @@ OTHER SUPPORTING PROGRAMS:
         Example:
            sh gtf2bed.sh -f annotation.gtf > annotation.bed
 
+2. **gff3_2_gtf.sh**:
+
+        This script transform the GFF3 file to a GTF file.
+        Syntax:
+           sh gff3_2_gtf.sh -f gffFile_name > gtfFile_name
+        Options:
+           -h  help message
+	   -f  GFF file name
+        Example:
+           sh gff3_2_gtf.sh -f annotation.gff > annotation.gtf
+
+3. **plotScript.R**:
+
+        This script will run DESeq2 and create plots from the DESeq2 results.
+        SYNTAX:
+           Rscript scripts/DESeq2Plot.R [SE/PE] sampleFile
+        Example:
+           Rscript scripts/DESeq2Plot.R SE samples.bowtie.SEsample
+             The above example will run the script with the arguments SE 
+	     (single-end reads), and the samples.bowtie.SEsample. The sample
+	     names will be picked up from the samples.bowtie.SEsample.
+	     
+	     This script should be executed where the following files are available.
+	     1. DESeqCountData.csv
+	     2. DESeqCountCondition.csv
+	     3. sampleFile (example samples.bowtie.SEsample)
+	     4. edgeR_results.txt
+	     5. countFile.csv
+	     6. sampleCountNames.txt
+	     
+	     Output:
+	     The script would create the following plots:
+	     1. DESeqMAplot.pdf
+	     2. DESeqMA-LFCplot.pdf
+	     3. DESeq-Volcano.pdf
+	     4. pValue-histogram.pdf
+	     5. pca.pdf
+	     6. correlation.pdf
+	     7. correlation_violin.pdf
+	     8. edgeRheatMap.pdf
+	     
+	     MANAGING FIGURE's DIMENSION AND RESOLUTION:
+	     To manage the figure's properties, edit the pdf("fileName.pdf") lines
+	     with the following instructions.
+	         1. Specify file name to save the plot [jpeg(), png(), svg() or pdf()].
+		    Specify additional argument indicating the width, height, and the
+		    resolution of the image.
+		 2. Create the plot with graphics command
+		 3. Close the file with the call dev.off()
+		 
+             EXAMPLE [PNG, jpeg, tiff]:
+	        png(file="myplot.png",width=400,height=350,res=1200)
+                plot(x,y,main="EXAMPLE PLOT")
+                dev.off()
+             Vector-based format [PDF, SVG]:
+	        pdf(file="myplot.pdf",width=400,height=350,res=1200)
+		plot(x,y,main="EXAMPLE PLOT")
+		dev.off()
+
 
 INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:
 =============================================
