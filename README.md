@@ -279,6 +279,7 @@ R packages:
         RUVSeq          :       Remove Unwanted Variation from RNA-Seq Data
         RColorBrewer    :       Required to create nice looking color palettes
                                 especially for thematic maps, used with RUVSeq.
+        reshape2        :       To transform data between wide and long formats.
 
 
 PYTHON LIBRARIES:
