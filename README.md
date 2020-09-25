@@ -584,14 +584,14 @@ OTHER SUPPORTING PROGRAMS:
 
 1. **gtf2bed.sh**:
 
-    This script transform the GTF file to a bed file.
-    Syntax:
-       sh gtf2bed.sh -f gtfFile_name > bedFile_name
-    Options:
-       -h  help message
-       -f  GTF file name
-    Example:
-       sh gtf2bed.sh -f annotation.gtf > annotation.bed
+        This script transform the GTF file to a bed file.
+        Syntax:
+           sh gtf2bed.sh -f gtfFile_name > bedFile_name
+        Options:
+           -h  help message
+           -f  GTF file name
+        Example:
+           sh gtf2bed.sh -f annotation.gtf > annotation.bed
 
 
 INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:
