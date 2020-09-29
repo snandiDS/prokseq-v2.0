@@ -50,8 +50,8 @@ SYNTAX:
 EXAMPLE:
         python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
 
-        The program will run with sample file "samples.bowtie.PEsample", and parameter 
-        file "param.bowtie.yaml". The program will also utilize 4 processors.
+        The program will run with the sample file "samples.bowtie.PEsample", and the
+        parameter file "param.bowtie.yaml". The program will also utilize 4 processors.
 
 To run the program, the dependencies mentioned above are essential. However, the executable binaries 
 are bundled in the folder "depend". The details of the parameter and the sample files are as below. 
