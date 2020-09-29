@@ -13,10 +13,10 @@ DOCKER:
 We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
 
 **Step 1:** To pull the image from the Docker Hub registry:
-> docker pull snandids/prokseq-v2.0:v1
+> docker pull snandids/prokseq-v2.0:latest
 
 **Step 2:** To Run:
-> docker run -it snandids/prokseq-v2.0:v1 <br/>
+> docker run -it snandids/prokseq-v2.0:latest <br/>
 > sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
