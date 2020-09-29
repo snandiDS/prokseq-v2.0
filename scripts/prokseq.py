@@ -27,8 +27,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Program for automated RNA-seq data analysis package for Prokaryotic. The program takes care of the
 RNA-seq data analysis from quality control to pathway enrichment analysis.
 
-    Copyright (C) .....
-
     Author: Soumyadeep Nandi <snandi@ggn.amity.edu>
             A K M Firoj Mahmud <firoj.mahmud@umu.se>
 ----------------------------------------------------------------------------------------------------
