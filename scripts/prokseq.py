@@ -1,5 +1,28 @@
 #!/usr/bin/python
 
+'''
+Copyright (c) Soumyadeep Nandi and Firoj Mahmud
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+'''
+
 '''-------------------------------------------------------------------------------------------------
 Program for automated RNA-seq data analysis package for Prokaryotic. The program takes care of the
 RNA-seq data analysis from quality control to pathway enrichment analysis.
@@ -8,7 +31,36 @@ RNA-seq data analysis from quality control to pathway enrichment analysis.
 
     Author: Soumyadeep Nandi <snandi@ggn.amity.edu>
             A K M Firoj Mahmud <firoj.mahmud@umu.se>
---------------------------------------------------------------------------------------------------'''
+----------------------------------------------------------------------------------------------------
+
+RUNNING PROKSEQ:
+
+SYNTAX:
+        Usage: prokseq.py [options] arg
+
+        Options:
+          -h, --help            show this help message and exit
+          -s SAMPLE_FILE_NAME, --sample=SAMPLE_FILE_NAME
+                                provide the sample file
+          -p PARAMETER_FILE_NAME, --param=PARAMETER_FILE_NAME
+                                provide the parameter file
+          -n NUMBER OF PROCESSORS, --numproc=NUMBER OF PROCESSORS
+                                provide the number of processors
+          -v, --version         Version of the package
+
+
+EXAMPLE:
+        python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
+
+        The program will run with sample file "samples.bowtie.PEsample", and parameter 
+        file "param.bowtie.yaml". The program will also utilize 4 processors.
+
+To run the program, the dependencies mentioned above are essential. However, the executable binaries 
+are bundled in the folder "depend". The details of the parameter and the sample files are as below. 
+An example parameter (param.bowtie.yaml) and sample file (samples.bowtie.PEsample) are bundled 
+together with the package in the exampleFiles.tar.gz.
+'''
+
 
 
 import os
@@ -631,9 +683,12 @@ def main():
       if(pe==1): fn.createRunRUVSeq(inp['paramRootPath'],"RUVSeq_pe",options.sampleFile,options.paramFile,"0",str(inp['paramRUVseq']['GeneListFile']))
       if(pe==0): fn.createRunRUVSeq(inp['paramRootPath'],"RUVSeq_se",options.sampleFile,options.paramFile,"0",str(inp['paramRUVseq']['GeneListFile']))
 
-   if(inp['pathwayAna']):
-      print("\n\nPATHWAY ANALYSIS\n")
-      fn.createRunClstPrf(inp['paramRootPath'],str(pathway['cutoffP']),str(pathway['cutoffN']),pathway['org'],pathway['term2geneFile'],pathway['term2nameFile'])
+   if(fn.is_connected()):
+      if(inp['pathwayAna']):
+         print("\n\nPATHWAY ANALYSIS\n")
+         fn.createRunClstPrf(inp['paramRootPath'],str(pathway['cutoffP']),str(pathway['cutoffN']),pathway['org'],pathway['term2geneFile'],pathway['term2nameFile'])
+   else:
+      print("No internet!\n Could not run clusterProfiler")
 
    if(inp['transcriptAl']):
       fn.cleanUp(inp['paramRootPath'],"Salmon")
@@ -641,6 +696,18 @@ def main():
       fn.cleanUp(inp['paramRootPath'],"Bowtie")
 
    fn.createHTML()
+
+   print('''
+   The output of the analysis is submitted in Output folder. The content of the folder is:
+      QC_preFilter
+      QC_afterFilter
+      alignmentFile 
+      countAndExpression
+      DiffExpResults
+      PathwayEnrichment
+      genomeBrowseFile
+      Plots
+   The results can also be viewed with results.html''')
 
 if __name__ == '__main__':
         main()
