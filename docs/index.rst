@@ -28,13 +28,13 @@ We strongly recommend using docker to run the pipeline. The external dependencie
 
 **Step 1:** To pull the image from the Docker Hub registry::
 
-    docker pull snandids/prokseq-v2.0:v1
+    docker pull snandids/prokseq-v2.0:latest
     
 **Step 2:** To Run
 
 .. code-block:: bash
 
-    docker run -it snandids/prokseq-v2.0:v1
+    docker run -it snandids/prokseq-v2.0:latest
     sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
