@@ -380,8 +380,7 @@ SYNTAX:
 
 :: 
 
-Usage: prokseq.py [options] arg
-
+        Usage: prokseq.py [options] arg
         Options:
           -h, --help            show this help message and exit
           -s SAMPLE_FILE_NAME, --sample=SAMPLE_FILE_NAME
