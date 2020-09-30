@@ -211,8 +211,10 @@ After setting up of the depend directory, one can check if the environment is al
 
 
 
+DIRECTORY LAYOUT:
+=================
+
 Default directory layout should look like below:
-================================================
 
 ::
 
@@ -246,8 +248,10 @@ Default directory layout should look like below:
         ./scripts/libmod/pipeFunc.py
         ./scripts/libmod/__pycache__
 
+EXAMPLE FILES:
+==============
+
 Example files layout:
-=====================
 
 ::
 
