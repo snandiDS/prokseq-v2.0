@@ -10,7 +10,7 @@ The pipeline can be obtained from the following repositories.<br/>
 
 DOCKER:
 -------
-We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
+We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:latest is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
 
 **Step 1:** To pull the image from the Docker Hub registry:
 > docker pull snandids/prokseq-v2.0:latest
