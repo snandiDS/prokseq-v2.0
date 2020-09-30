@@ -234,7 +234,7 @@ EXTERNAL TOOLS:
 The dependencies mentioned above are essential. The executable binaries
 are bundled in the folder "depend" in Docker and Anaconda repositories.
 If the user is fetching the package from github 
-[https://github.com/snandiDS/prokseq-v2.1], then the user will get a
+[https://github.com/snandiDS/prokseq-v2.0], then the user will get a
 script [setup.sh] inside the depend folder.
 Please run this script as
 
