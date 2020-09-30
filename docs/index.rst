@@ -23,7 +23,8 @@ The pipeline can be obtained from the following repositories.
 `[GitHub] <https://github.com/snandiDS/prokseq-v2.0>`_, `[Docker] <https://hub.docker.com/repository/docker/snandids/prokseq-v2.0>`_, and `[Anaconda Cloud] <https://anaconda.org/snandiDS/prokseq>`_.
 
 DOCKER:
--------
+=======
+
 We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:latest is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
 
 **Step 1:** To pull the image from the Docker Hub registry::
@@ -144,7 +145,8 @@ OR
     docker cp 8f780c0a9969:/root/prokseq/TEST.txt .
 
 CONDA:
-------
+======
+
 **Step 1:** Fetch the package.::
 
     conda install -p <PATH_TO_DOWNLOAD> -c <CHANNEL> prokseq
