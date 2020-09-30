@@ -311,9 +311,10 @@ EXTERNAL TOOLS:
         Salmon          :       A tool for wicked-fast transcript
                                 quantification from RNA-seq data.
 
-The dependencies mentioned above are essential. However, the executable binaries
-are bundled in the folder "depend". If the user is fetching the package from
-github [https://github.com/snandiDS/prokseq-v2.1], then the user will get a
+The dependencies mentioned above are essential. The executable binaries
+are bundled in the folder "depend" in Docker and Anaconda repositories.
+If the user is fetching the package from github 
+[https://github.com/snandiDS/prokseq-v2.1], then the user will get a
 script [setup.sh] inside the depend folder.
 Please run this script as::
 
