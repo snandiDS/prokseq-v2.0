@@ -593,8 +593,7 @@ DATA FILES:
                    Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance). This is
                    genome specific Gene ontology file.  TERM2GENE.csv is a comma delimited 2 column file.
                    First column is the GO term and second column is the gene name. User can download the GO file
-                   or GFF annotation file from Genome2D webserver
-                   (http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)
+                   or GFF annotation file from `[Genome2D webserver] <http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)>`_
                 2. TERM2NAME.csv
                    Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is the GO term
                    classification which is common for all organisms.
@@ -604,7 +603,26 @@ DATA FILES:
            For Salmon implementation:
               Transcript file in fasta format
         4. GTF file
+	- Bacterial GTF files can be downloaded from the following link `[GTF files] <https://bacteria.ensembl.org/info/data/ftp/index.html>`_
         5. Bed file
+
+We have deposited 15 bacterial genome annotation files in the following link
+
+`[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
+`[Neisseria_gonorrhoeae_FA_1090] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>`_,
+`[Campylobacter_jejuni_CJ677CC541] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>`_,
+`[Escherichia_coli_O157] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>`_,
+`[Klebsiella_pneumoniae_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip>`_,
+`[Streptococcus_pyogenes_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip>`_,
+`[Yersinia_enterocolitica_LC20] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip>`_,
+`[Yersinia_pestis_Antiqua] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip>`_,
+`[Vibrio_cholerae_MJ_ASM2258v1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip>`_,
+`[Staphylococcus_aureus_ASM59796v1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip>`_,
+`[Salmonella_enterica_subsp_enterica_serovar_Typhimurium] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip>`_,
+`[Pseudomonas_aeruginosa_PAO1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip>`_,
+`[Mycobacterium_tuberculosis] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>`_,
+`[Listeria_monocytogenes_07PF0776] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>`_,
+`[Helicobacter_pylori] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>`_,
 
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
@@ -778,7 +796,7 @@ INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:
 
 If one or any of the above dependencies are missing user can install it  by following the instructions below.
 
-Pyhton3:
+Python3:
 --------
 
 ::
