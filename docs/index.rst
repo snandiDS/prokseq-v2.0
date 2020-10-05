@@ -652,11 +652,6 @@ Once generated the gtf and the bed files, user need to include these files in th
 *Also the **TERM2GENE.txt** should be copied to the **data** directory.*
 
 	
-
-
-
-All these files should be declared in SAMPLE FILE and PARAMETER file.
-
 OUTPUT:
 =======
 ProkSeq produces several folder with analysis results as a Output folder.
