@@ -786,9 +786,10 @@ For ubuntu 18.04 or higher version use sudo apt-get update | apt-get install pyt
 User can download the depend folder along with all the dependencies from the following link
 https://umeauniversity-my.sharepoint.com/:u:/g/personal/aakk0004_ad_umu_se/EZ6UF28lCcJGiuPOWQ8oVr0BtQAK1caGUEdVHuP29_I01g?e=o1K0mh
 OR, follow the following:
+
         1. Create a folder named depend
         2. cd depend
         3. cp ../scripts/setup.sh .
         4. sh setup.sh
+
 The depend folder will be populated.
->>>>>>> e35c0f4cae0ee639b15bab3c680488f5de628a4d
