@@ -790,5 +790,5 @@ OR, follow the following:
         2. cd depend
         3. cp ../scripts/setup.sh .
         4. sh setup.sh
-The depend foldr will be populated.
+The depend folder will be populated.
 >>>>>>> e35c0f4cae0ee639b15bab3c680488f5de628a4d
