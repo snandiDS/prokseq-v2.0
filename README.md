@@ -524,7 +524,7 @@ We have deposited 15 bacterial genome sequence and annotation files in the follo
 
 **To use these files, user need to follow the following.**
 
-For example using Mycobacterium tuberculosis:
+For example using *Mycobacterium tuberculosis*:
 > wget http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip <br/>
 > unzip Mycobacterium_tuberculosis.zip <br/>
 > cd Mycobacterium_tuberculosis <br/>
