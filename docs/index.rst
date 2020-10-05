@@ -596,14 +596,16 @@ DATA FILES:
                    Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is Genome 
 		   specific Gene ontology file. TERM2GENE.csv is a comma delimited 2 column file. 
 		   First column is the GO term and second column is the gene name. User can download
-		   the GO file or GFF annotation file from `[Genome2D webserver] <http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)>`_
+		   the GO file or GFF annotation file from [Genome2D webserver] 
+		   <http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)>
 
         3. For Bowtie implementation:
               Genome file in fasta format
            For Salmon implementation:
               Transcript file in fasta format
         4. GTF file
-	- Bacterial GTF files can be downloaded from the following link `[GTF files] <https://bacteria.ensembl.org/info/data/ftp/index.html>`_
+	- Bacterial GTF files can be downloaded from the following link [GTF files]
+	  <https://bacteria.ensembl.org/info/data/ftp/index.html>
         5. Bed file
 
 All these files should be declared in SAMPLE FILE and PARAMETER file.
