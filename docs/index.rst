@@ -606,33 +606,48 @@ DATA FILES:
 	- Bacterial GTF files can be downloaded from the following link `[GTF files] <https://bacteria.ensembl.org/info/data/ftp/index.html>`_
         5. Bed file
 
-We have deposited 15 bacterial genome sequence and annotation files in the following link
+All these files should be declared in SAMPLE FILE and PARAMETER file.
 
-`[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
-`[Neisseria_gonorrhoeae_FA_1090] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>`_,
-`[Campylobacter_jejuni_CJ677CC541] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>`_,
-`[Escherichia_coli_O157] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>`_,
-`[Klebsiella_pneumoniae_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip>`_,
-`[Streptococcus_pyogenes_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip>`_,
-`[Yersinia_enterocolitica_LC20] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip>`_,
-`[Yersinia_pestis_Antiqua] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip>`_,
-`[Vibrio_cholerae_MJ_ASM2258v1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip>`_,
-`[Staphylococcus_aureus_ASM59796v1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip>`_,
-`[Salmonella_enterica_subsp_enterica_serovar_Typhimurium] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip>`_,
-`[Pseudomonas_aeruginosa_PAO1] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip>`_,
-`[Mycobacterium_tuberculosis] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>`_,
-`[Listeria_monocytogenes_07PF0776] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>`_,
-`[Helicobacter_pylori] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>`_,
+| We have deposited 15 bacterial genome sequence and annotation files in the following link
+| [Acinetobacter_baumannii_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip),
+| [Neisseria_gonorrhoeae_FA_1090](http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip),
+| [Campylobacter_jejuni_CJ677CC541](http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip),
+| [Escherichia_coli_O157](http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip),
+| [Klebsiella_pneumoniae_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip),
+| [Streptococcus_pyogenes_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip),
+| [Yersinia_enterocolitica_LC20](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip),
+| [Yersinia_pestis_Antiqua](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip),
+| [Vibrio_cholerae_MJ_ASM2258v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip),
+| [Staphylococcus_aureus_ASM59796v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip),
+| [Salmonella_enterica_subsp_enterica_serovar_Typhimurium](http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip),
+| [Pseudomonas_aeruginosa_PAO1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip),
+| [Mycobacterium_tuberculosis](http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip),
+| [Listeria_monocytogenes_07PF0776](http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip),
+| [Helicobacter_pylori](http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip)
 
 **To use these files, user need to follow the following.**
 
-For example using Mycobacterium tuberculosis
+For example using *Mycobacterium tuberculosis*:
 
 .. code-block:: bash
 
-        wget http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip
-	unzip Mycobacterium_tuberculosis.zip
-	cd Mycobacterium_tuberculosis
+    > wget http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip
+    > unzip Mycobacterium_tuberculosis.zip
+    > cd Mycobacterium_tuberculosis
+    > sh /home/path/testPrseq/scripts/gff3_2_gtf.sh -f Mycobacterium_tuberculosis_variant_bovis_BCG_str_ATCC_35743_63839_ASM19407v3_genomic.gff > myco_tub.gtf
+    > sh /home/path/testPrseq/scripts/gtf2bed.sh -f myco_tub.gtf > myco_tube.bed
+
+Once generated the gtf and the bed files, user need to include these files in the parameter file.
+::
+              #       Define the Featurecounts options as bellow:
+              FEATURECOUNTS:
+                 a : myco_tub.gtf #Define the Featurecounts input GTF file.
+              #       geneBody coverage.r require a bed file. Specify the name of bed file as bellow:
+              geneBody_coverage:
+                 r : myco_tube.bed
+
+*Also the **TERM2GENE.txt** should be copied to the **data** directory.*
+
 	
 
 
