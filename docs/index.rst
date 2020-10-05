@@ -610,7 +610,7 @@ All these files should be declared in SAMPLE FILE and PARAMETER file.
 
 | We have deposited 15 bacterial genome sequence and annotation files in the following link
 | `[GitHub] <https://github.com/snandiDS/prokseq-v2.0>`,_
-| `[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`,
+| `[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
 | [Neisseria_gonorrhoeae_FA_1090]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>,
 | [Campylobacter_jejuni_CJ677CC541]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>,
 | [Escherichia_coli_O157]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>,
