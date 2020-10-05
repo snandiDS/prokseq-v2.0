@@ -506,21 +506,21 @@ DATA FILES:
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
 We have deposited 15 bacterial genome sequence and annotation files in the following link
-[Acinetobacter_baumannii_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip),
-[Neisseria_gonorrhoeae_FA_1090](http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip)
-[Campylobacter_jejuni_CJ677CC541](http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip),
-[Escherichia_coli_O157](http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip),
-[Klebsiella_pneumoniae_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip),
-[Streptococcus_pyogenes_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip)
-[Yersinia_enterocolitica_LC20](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip),
-[Yersinia_pestis_Antiqua](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip),
-[Vibrio_cholerae_MJ_ASM2258v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip),
-[Staphylococcus_aureus_ASM59796v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip),
-[Salmonella_enterica_subsp_enterica_serovar_Typhimurium](http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip),
-[Pseudomonas_aeruginosa_PAO1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip),
-[Mycobacterium_tuberculosis](http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip),
-[Listeria_monocytogenes_07PF0776](http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip),
-[Helicobacter_pylori](http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip),
+[Acinetobacter_baumannii_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip), <br/>
+[Neisseria_gonorrhoeae_FA_1090](http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip), <br/>
+[Campylobacter_jejuni_CJ677CC541](http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip), <br/>
+[Escherichia_coli_O157](http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip), <br/>
+[Klebsiella_pneumoniae_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip), <br/>
+[Streptococcus_pyogenes_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip), <br/>
+[Yersinia_enterocolitica_LC20](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip), <br/>
+[Yersinia_pestis_Antiqua](http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip), <br/>
+[Vibrio_cholerae_MJ_ASM2258v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip), <br/>
+[Staphylococcus_aureus_ASM59796v1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip), <br/>
+[Salmonella_enterica_subsp_enterica_serovar_Typhimurium](http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip), <br/>
+[Pseudomonas_aeruginosa_PAO1](http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip), <br/>
+[Mycobacterium_tuberculosis](http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip), <br/>
+[Listeria_monocytogenes_07PF0776](http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip), <br/>
+[Helicobacter_pylori](http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip), <br/>
 
 **To use these files, user need to follow the following.**
 
@@ -540,6 +540,7 @@ Once generated the gtf and the bed files, user need to include these files in th
               geneBody_coverage:
                  r : myco_tube.bed
 ```
+Also the TERM2GENE.txt should be copied to the **data** directory.
 
 OUTPUT:
 =======
