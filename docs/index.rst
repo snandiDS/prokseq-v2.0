@@ -606,7 +606,7 @@ DATA FILES:
 	- Bacterial GTF files can be downloaded from the following link `[GTF files] <https://bacteria.ensembl.org/info/data/ftp/index.html>`_
         5. Bed file
 
-We have deposited 15 bacterial genome annotation files in the following link
+We have deposited 15 bacterial genome sequence and annotation files in the following link
 
 `[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
 `[Neisseria_gonorrhoeae_FA_1090] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>`_,
@@ -623,6 +623,19 @@ We have deposited 15 bacterial genome annotation files in the following link
 `[Mycobacterium_tuberculosis] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>`_,
 `[Listeria_monocytogenes_07PF0776] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>`_,
 `[Helicobacter_pylori] <http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>`_,
+
+**To use these files, user need to follow the following.**
+
+For example using Mycobacterium tuberculosis
+
+.. code-block:: bash
+
+        wget http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip
+	unzip Mycobacterium_tuberculosis.zip
+	cd Mycobacterium_tuberculosis
+	
+
+
 
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
