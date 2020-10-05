@@ -487,15 +487,15 @@ DATA FILES:
 ===========
         1. Samples files in fastq format.
         2. Pathway analysis (Optional):
-                1. TERN2GENE.csv
-                   Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance). This is
-                   genome specific Gene ontology file.  TERM2GENE.csv is a comma delimited 2 column file.
-                   First column is the GO term and second column is the gene name. User can download the GO file
-                   or GFF annotation file from Genome2D webserver
-                   (http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)
+                1. TERN2NAME.csv
+                   Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance).
+                   This is the GO term classification which is common for all organisms.
                 2. TERM2NAME.csv
-                   Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is the GO term
-                   classification which is common for all organisms.
+                   Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is Genome 
+                   specific Gene ontology file. TERM2GENE.csv is a comma delimited 2 column file. 
+                   First column is the GO term and second column is the gene name. User can download
+                   the GO file or GFF annotation file from [Genome2D webserver] 
+                   <http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)>
 
         3. For Bowtie implementation:
               Genome file in fasta format
