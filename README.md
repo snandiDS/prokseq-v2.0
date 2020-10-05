@@ -505,7 +505,7 @@ DATA FILES:
         5. Bed file
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
-We have deposited 15 bacterial genome sequence and annotation files in the following link
+We have deposited 15 bacterial genome sequence and annotation files in the following link <br/>
 [Acinetobacter_baumannii_ATCC](http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip), <br/>
 [Neisseria_gonorrhoeae_FA_1090](http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip), <br/>
 [Campylobacter_jejuni_CJ677CC541](http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip), <br/>
@@ -540,7 +540,7 @@ Once generated the gtf and the bed files, user need to include these files in th
               geneBody_coverage:
                  r : myco_tube.bed
 ```
-Also the TERM2GENE.txt should be copied to the **data** directory.
+*Also the **TERM2GENE.txt** should be copied to the **data** directory.*
 
 OUTPUT:
 =======
