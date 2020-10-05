@@ -609,22 +609,22 @@ DATA FILES:
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
 | We have deposited 15 bacterial genome sequence and annotation files in the following link
-| `[GitHub] <https://github.com/snandiDS/prokseq-v2.0>`,_
-| `[Acinetobacter_baumannii_ATCC] <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
-| [Neisseria_gonorrhoeae_FA_1090]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>,
-| [Campylobacter_jejuni_CJ677CC541]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>,
-| [Escherichia_coli_O157]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>,
-| [Klebsiella_pneumoniae_ATCC]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip>,
-| [Streptococcus_pyogenes_ATCC]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip>,
-| [Yersinia_enterocolitica_LC20]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip>,
-| [Yersinia_pestis_Antiqua]<http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip>,
-| [Vibrio_cholerae_MJ_ASM2258v1]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip>,
-| [Staphylococcus_aureus_ASM59796v1]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip>,
-| [Salmonella_enterica_subsp_enterica_serovar_Typhimurium]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip>,
-| [Pseudomonas_aeruginosa_PAO1]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip>,
-| [Mycobacterium_tuberculosis]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>,
-| [Listeria_monocytogenes_07PF0776]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>,
-| [Helicobacter_pylori]<http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>
+| `Acinetobacter_baumannii_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
+| `Neisseria_gonorrhoeae_FA_1090 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>`_,
+| `Campylobacter_jejuni_CJ677CC541 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>`_,
+| `Escherichia_coli_O157 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>`_,
+| `Klebsiella_pneumoniae_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip>`_,
+| `Streptococcus_pyogenes_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip>`_,
+| `Yersinia_enterocolitica_LC20 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip>`_,
+| `Yersinia_pestis_Antiqua <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip>`_,
+| `Vibrio_cholerae_MJ_ASM2258v1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip>`_,
+| `Staphylococcus_aureus_ASM59796v1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip>`_,
+| `Salmonella_enterica_subsp_enterica_serovar_Typhimurium <http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip>`_,
+| `Pseudomonas_aeruginosa_PAO1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip>`_,
+| `Mycobacterium_tuberculosis <http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>`_,
+| `Listeria_monocytogenes_07PF0776 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>`_,
+| `Helicobacter_pylori <http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>`_
+
 
 **To use these files, user need to follow the following.**
 
