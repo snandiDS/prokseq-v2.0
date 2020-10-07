@@ -23,18 +23,19 @@ The pipeline can be obtained from the following repositories.
 `[GitHub] <https://github.com/snandiDS/prokseq-v2.0>`_, `[Docker] <https://hub.docker.com/repository/docker/snandids/prokseq-v2.0>`_, and `[Anaconda Cloud] <https://anaconda.org/snandiDS/prokseq>`_.
 
 DOCKER:
--------
-We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:v1 is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
+=======
+
+We strongly recommend using docker to run the pipeline. The external dependencies and R dependencies are all bundled in the container. The container prokseq-v2.0:latest is available in https://hub.docker.com/repository/docker/snandids/prokseq-v2.0
 
 **Step 1:** To pull the image from the Docker Hub registry::
 
-    docker pull snandids/prokseq-v2.0:v1
+    docker pull snandids/prokseq-v2.0:latest
     
 **Step 2:** To Run
 
 .. code-block:: bash
 
-    docker run -it snandids/prokseq-v2.0:v1
+    docker run -it snandids/prokseq-v2.0:latest
     sh-5.0# cd prokseq
 
 **Step 3:** Activate the environment
@@ -144,7 +145,8 @@ OR
     docker cp 8f780c0a9969:/root/prokseq/TEST.txt .
 
 CONDA:
-------
+======
+
 **Step 1:** Fetch the package.::
 
     conda install -p <PATH_TO_DOWNLOAD> -c <CHANNEL> prokseq
@@ -209,8 +211,10 @@ After setting up of the depend directory, one can check if the environment is al
 
 
 
+DIRECTORY LAYOUT:
+=================
+
 Default directory layout should look like below:
-================================================
 
 ::
 
@@ -244,8 +248,10 @@ Default directory layout should look like below:
         ./scripts/libmod/pipeFunc.py
         ./scripts/libmod/__pycache__
 
+EXAMPLE FILES:
+==============
+
 Example files layout:
-=====================
 
 ::
 
@@ -305,9 +311,10 @@ EXTERNAL TOOLS:
         Salmon          :       A tool for wicked-fast transcript
                                 quantification from RNA-seq data.
 
-The dependencies mentioned above are essential. However, the executable binaries
-are bundled in the folder "depend". If the user is fetching the package from
-github [https://github.com/snandiDS/prokseq-v2.1], then the user will get a
+The dependencies mentioned above are essential. The executable binaries
+are bundled in the folder "depend" in Docker and Anaconda repositories.
+If the user is fetching the package from github 
+[https://github.com/snandiDS/prokseq-v2.0], then the user will get a
 script [setup.sh] inside the depend folder.
 Please run this script as::
 
@@ -373,8 +380,7 @@ SYNTAX:
 
 :: 
 
-Usage: prokseq.py [options] arg
-
+        Usage: prokseq.py [options] arg
         Options:
           -h, --help            show this help message and exit
           -s SAMPLE_FILE_NAME, --sample=SAMPLE_FILE_NAME
@@ -583,25 +589,69 @@ DATA FILES:
 
         1. Samples files in fastq format.
         2. Pathway analysis (Optional):
-                1. TERN2GENE.csv
-                   Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance). This is
-                   genome specific Gene ontology file.  TERM2GENE.csv is a comma delimited 2 column file.
-                   First column is the GO term and second column is the gene name. User can download the GO file
-                   or GFF annotation file from Genome2D webserver
-                   (http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)
+                1. TERN2NAME.csv
+                   Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance).
+		   This is the GO term classification which is common for all organisms.
                 2. TERM2NAME.csv
-                   Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is the GO term
-                   classification which is common for all organisms.
+                   Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is Genome 
+		   specific Gene ontology file. TERM2GENE.csv is a comma delimited 2 column file. 
+		   First column is the GO term and second column is the gene name. User can download
+		   the GO file or GFF annotation file from [Genome2D webserver] 
+		   <http://genome2d.molgenrug.nl/g2d_core_select_genbank.php)>
 
         3. For Bowtie implementation:
               Genome file in fasta format
            For Salmon implementation:
               Transcript file in fasta format
         4. GTF file
+	- Bacterial GTF files can be downloaded from the following link [GTF files]
+	  <https://bacteria.ensembl.org/info/data/ftp/index.html>
         5. Bed file
 
 All these files should be declared in SAMPLE FILE and PARAMETER file.
 
+| We have deposited 15 bacterial genome sequence and annotation files in the following link
+| `Acinetobacter_baumannii_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Acinetobacter_baumannii_ATCC.zip>`_,
+| `Neisseria_gonorrhoeae_FA_1090 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Neisseria_gonorrhoeae_FA_1090.zip>`_,
+| `Campylobacter_jejuni_CJ677CC541 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Campylobacter_jejuni_CJ677CC541.zip>`_,
+| `Escherichia_coli_O157 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Escherichia_coli_O157.zip>`_,
+| `Klebsiella_pneumoniae_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Klebsiella_pneumoniae_ATCC.zip>`_,
+| `Streptococcus_pyogenes_ATCC <http://www.fallmanlab.org/wp-content/uploads/2020/10/Streptococcus_pyogenes_ATCC.zip>`_,
+| `Yersinia_enterocolitica_LC20 <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_enterocolitica_LC20.zip>`_,
+| `Yersinia_pestis_Antiqua <http://www.fallmanlab.org/wp-content/uploads/2020/10/Yersinia_pestis_Antiqua.zip>`_,
+| `Vibrio_cholerae_MJ_ASM2258v1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Vibrio_cholerae_MJ_ASM2258v1.zip>`_,
+| `Staphylococcus_aureus_ASM59796v1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Staphylococcus_aureus_ASM59796v1.zip>`_,
+| `Salmonella_enterica_subsp_enterica_serovar_Typhimurium <http://www.fallmanlab.org/wp-content/uploads/2020/09/Salmonella_enterica_subsp_enterica_serovar_Typhimurium.zip>`_,
+| `Pseudomonas_aeruginosa_PAO1 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Pseudomonas_aeruginosa_PAO1.zip>`_,
+| `Mycobacterium_tuberculosis <http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip>`_,
+| `Listeria_monocytogenes_07PF0776 <http://www.fallmanlab.org/wp-content/uploads/2020/09/Listeria_monocytogenes_07PF0776.zip>`_,
+| `Helicobacter_pylori <http://www.fallmanlab.org/wp-content/uploads/2020/09/Helicobacter_pylori_ELS37.zip>`_
+
+
+**To use these files, user need to follow the following.**
+
+For example using *Mycobacterium tuberculosis*:
+
+.. code-block:: bash
+
+    > wget http://www.fallmanlab.org/wp-content/uploads/2020/09/Mycobacterium_tuberculosis.zip
+    > unzip Mycobacterium_tuberculosis.zip
+    > cd Mycobacterium_tuberculosis
+    > sh /home/path/testPrseq/scripts/gff3_2_gtf.sh -f Mycobacterium_tuberculosis_variant_bovis_BCG_str_ATCC_35743_63839_ASM19407v3_genomic.gff > myco_tub.gtf
+    > sh /home/path/testPrseq/scripts/gtf2bed.sh -f myco_tub.gtf > myco_tube.bed
+
+Once generated the gtf and the bed files, user need to include these files in the parameter file.
+::
+              #       Define the Featurecounts options as bellow:
+              FEATURECOUNTS:
+                 a : myco_tub.gtf #Define the Featurecounts input GTF file.
+              #       geneBody coverage.r require a bed file. Specify the name of bed file as bellow:
+              geneBody_coverage:
+                 r : myco_tube.bed
+
+*Also the **TERM2GENE.txt** should be copied to the **data** directory.*
+
+	
 OUTPUT:
 =======
 ProkSeq produces several folder with analysis results as a Output folder.
@@ -772,7 +822,7 @@ INSTALLATION INSTRUCTION FOR THE DEPENDENCIES:
 
 If one or any of the above dependencies are missing user can install it  by following the instructions below.
 
-Pyhton3:
+Python3:
 --------
 
 ::

@@ -793,5 +793,8 @@ OR, follow the following:
         4. sh setup.sh
 
 The depend folder will be populated.
+<<<<<<< HEAD
 >>>>>>> e35c0f4cae0ee639b15bab3c680488f5de628a4d
 
+=======
+>>>>>>> 518316085252e9d7be6484c2aab35c89492d952e
