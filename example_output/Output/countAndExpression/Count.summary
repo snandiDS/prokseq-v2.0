@@ -1,0 +1,12 @@
+Status	sampleTreat_1.sam	sampleTreat_2.sam	sampleTreat_3.sam	sampleCtrl_1.sam	sampleCtrl_2.sam	sampleCtrl_3.sam
+Assigned	33667	32942	30671	26064	27256	22351
+Unassigned_Ambiguity	1856	1908	1663	1593	1729	1206
+Unassigned_MultiMapping	0	0	0	0	0	0
+Unassigned_NoFeatures	7688	7424	10038	12903	12843	9196
+Unassigned_Unmapped	4333	4468	4684	3384	3248	5763
+Unassigned_MappingQuality	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0
+Unassigned_Secondary	0	0	0	0	0	0
+Unassigned_Nonjunction	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0

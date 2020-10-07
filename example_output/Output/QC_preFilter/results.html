@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>ProkSeq Result</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#corr" class="w3-bar-item w3-button">Correlation Plots</a>
+  <a href="#vol" class="w3-bar-item w3-button">Volcano plots</a>
+  <a href="#ma" class="w3-bar-item w3-button">MA plot</a>
+  <a href="#pca" class="w3-bar-item w3-button">PCA plot</a>
+  <a href="#hist" class="w3-bar-item w3-button">pValue-histogram</a>
+  <a href="#gbc" class="w3-bar-item w3-button">Gene Body Coverage</a>
+  <a href="#ehm" class="w3-bar-item w3-button">Heat map</a>
+  <a href="#ruv" class="w3-bar-item w3-button">Remove Unwanted Variation</a>
+  <a href="#path" class="w3-bar-item w3-button">PATHWAY</a>
+  <!--<a href="#chapter4" class="w3-bar-item w3-button">Link 4</a>-->
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:15%">
+
+<div class="w3-container w3-teal">
+  <h1>ProkSeq Analysis Results</h1>
+  <p>The result of the automated RNA-seq data analysis package for Prokaryotic ProkSeq is listed below. All the necessary steps of RNA-seq data analysis from quality control to pathway enrichment analysis are done. The graphical view of the pipeline demonstrates the actions carried out to do the analysis.</p>
+</div>
+
+<!-- <img src="iasstLetterHead.jpg" alt="Car" style="width:100%"> -->
+<h1>Pipeline workflow:</h1>
+<p>Flow diagram of the pipeline<p>
+<img src="scripts/GraphicalAbstractProkSeq.png" alt="Car" style="width:500px;height:600px;">
+
+
+
+<div class="w3-container">
+<h1>Results of the anlysis</h1>
+<!-- <p>The result of the analusis is below: "style="width:25%".</p> -->
+<p>The result of the analysis is below:</p>
+
+<a name="corr"></a>
+<h2>Sample correlation plots</h2>
+<p>Sample correlation plots: Box plot showing the reads distribution on the CDS. Y axis indicates the number of reads in a annotated feature.</p>
+<embed src="Output/plots/correlation.pdf" width="600px" height="600px" />
+<p>Sample violin plots: Showing the distribution shape of the reads within CDS. Wider sections of the violin plot represent a higher probability of the reads is distribute in the region.</p>
+<embed src="Output/plots/correlation_violin.pdf" width="600px" height="600px" />
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>Sample volcano plots</h2>
+<p>Volcano plot shows statistical significance (P value) in Y axis and magnitude of differential expression in fold change.</p>
+<p>DESeq2 volcanp plot:</p>
+<embed src="Output/plots/DESeq-Volcano.pdf" width="600px" height="600px" />
+<p>Edger volcano plot:</p>
+<embed src="Output/plots/edgeRvolcano.pdf" width="600px" height="600px" />
+<a name="vol"></a>
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>MA plot</h2>
+<p>MA plot: Showing log-fold change (M-values, i.e. the log of the ratio of level counts for each CDS between treatment and control) against the log-average (A-values, i.e. the average level counts for each CDS across treatment and control)</p>
+<embed src="Output/plots/DESeqMAplot.pdf" width="600px" height="600px" />
+<a name="ma"></a>
+<p>MA LFC plot: For Shrinking the log2 fold changes by using the information from all genes to generate more accurate estimates when the information for a gene is less as for example low counts, high dispersion values.</p>
+<embed src="Output/plots/DESeqMA-LFCplot.pdf" width="600px" height="600px" />
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>PCA plot</h2>
+<p>PCA plot: Principle component analysis (PCA) shows the variance between treatment and control and within biological replicates.</p>
+<embed src="Output/plots/pca.pdf" width="600px" height="600px" />
+<a name="pca"></a>
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>pValue-histogram plot</h2>
+<p>pValue-histogram plot: Showing the P-value distribution of the differential expressed genes. The enrichment of low p-values indicates differentially expressed genes, while those not differentially expressed are spread uniformly over the range from zero to one.</p>
+<embed src="Output/plots/pValue-histogram.pdf" width="600px" height="600px" />
+<a name="hist"></a>
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>Gene Body Coverage plot</h2>
+<p>Gene body coverage plot: RNA-seq reads coverage over gene body showing the distribution of reads within different samples. User can check if read coverage is uniform and if there is any 5-prime/3-prime bias among various samples.</p>
+<embed src="Output/plots/RSeQC.geneBodyCoverage.curves.pdf" width="600px" height="600px" />
+<a name="gbc"></a>
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>Gene count heat map</h2>
+<p>Gene count of the top 40 genes arranged based on log fold change across samples.</p>
+<embed src="Output/plots/edgeRheatMap.pdf" width="600px" height="600px" />
+<a name="ehm"></a>
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>Normalization by removing unwanted variation analysis</h2>
+<p>Normalization of unwanted variation using negative control genes that are not expected to be influenced by the biological covariates of interest.</p>
+<p>Boxplots of relative log expression (RLE = log-ratio of read count to median read count across sample) before removing unwanted variation:</p>
+<embed src="Output/plots/BefNorRLE.pdf" width="600px" height="600px" />
+<a name="ruv"></a>
+<p>Boxplots of relative log expression (RLE = log-ratio of read count to median read count across sample) after removing unwanted variation:</p>
+<embed src="Output/plots/AftNorRLE.pdf" width="600px" height="600px" />
+<p>Principal components plots before removing unwanted variation:</p>
+<embed src="Output/plots/BefNorPCA.pdf" width="600px" height="600px" />
+<p>Principal components plots after removing unwanted variation:</p>
+<embed src="Output/plots/AftNorPCA.pdf" width="600px" height="600px" />
+
+<p style="margin-bottom:3cm;"> </p>
+<h2>PATHWAY</h2>
+<h3>KEGG</h3>
+<embed src="Output/plots/keggPathway.pdf" width="600px" height="600px" />
+<div id="list">
+  <p><iframe src="Output/PathwayEnrichment/KEGGpathway.txt" frameborder="0" height="100"
+      width="95%"></iframe></p>
+</div>
+<h3>GO</h3>
+<div id="list">
+<embed src="Output/plots/goPathway.pdf" width="600px" height="600px" />
+  <p><iframe src="Output/PathwayEnrichment/GOpathways.txt" frameborder="0" height="100"
+      width="95%"></iframe></p>
+</div>
+<a name="path"></a>
+
+<!-- <a name="chapter4"></a>
+<h1>My Third Heading</h1>
+<p>My first paragraph.</p>
+<embed src="Output/plots/correlation.pdf" width="600px" height="600px" /> -->
+
+</div> <!-- Ending <div style="margin-left:35%"> -->
+
+</div> <!-- Ending <div class="w3-container"> -->
+      
+</body>
+</html>

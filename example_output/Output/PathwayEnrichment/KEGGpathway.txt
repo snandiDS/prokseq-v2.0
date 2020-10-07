@@ -1,0 +1,2 @@
+ID	Description	GeneRatio	BgRatio	pvalue	p.adjust	qvalue
+ypy03010	ypy03010	Ribosome	44/669	70/1546	0.000583198920376868	0.0425735211875114	0.0411308712265791

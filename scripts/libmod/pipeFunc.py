@@ -271,7 +271,6 @@ def createOp(Path):
    cmds.append("mkdir "+Path+"/Output/plots")
    cmds.append("mkdir "+Path+"/Output/QC_preFilter")
    cmds.append("mkdir "+Path+"/Output/QC_afterFilter")
-   cmds.append("mkdir "+Path+"/Output/bam")
    cmds.append("mkdir "+Path+"/Output/alignmentFile")
    cmds.append("mkdir "+Path+"/Output/countAndExpression")
    cmds.append("mkdir "+Path+"/Output/genomeBrowserFile")
@@ -935,13 +934,13 @@ def createHTML():
 <h3>KEGG</h3>
 <embed src="Output/plots/keggPathway.pdf" width="600px" height="600px" />
 <div id="list">
-  <p><iframe src="Output/Results/KEGGpathway.txt" frameborder="0" height="100"
+  <p><iframe src="Output/PathwayEnrichment/KEGGpathway.txt" frameborder="0" height="100"
       width="95%"></iframe></p>
 </div>
 <h3>GO</h3>
 <div id="list">
 <embed src="Output/plots/goPathway.pdf" width="600px" height="600px" />
-  <p><iframe src="Output/Results/GOpathways.txt" frameborder="0" height="100"
+  <p><iframe src="Output/PathwayEnrichment/GOpathways.txt" frameborder="0" height="100"
       width="95%"></iframe></p>
 </div>
 <a name="path"></a>
@@ -961,3 +960,21 @@ def createHTML():
    fo.write(html)
    fo.close()
 
+
+import socket
+def is_connected():
+   # 8.8.8.8 is the public DNS for Google (google-public-dns-a.google.com), 
+   # accessible via TCP using port 53.
+   REMOTE_SERVER = "8.8.8.8"
+   try:
+      # resolve the host name
+      # DNS listening
+      host = socket.gethostbyname(REMOTE_SERVER)
+      # connect to the host -- if the host is actually reachable
+      #s = socket.create_connection((host, 80), 2)
+      s = socket.create_connection((host, 53), 2)
+      s.close()
+      return True
+   except:
+      pass
+   return False

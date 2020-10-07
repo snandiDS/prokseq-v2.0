@@ -1,0 +1,6 @@
+sampleTreat_1.sam
+sampleTreat_2.sam
+sampleTreat_3.sam
+sampleCtrl_1.sam
+sampleCtrl_2.sam
+sampleCtrl_3.sam
