@@ -782,7 +782,8 @@ Showing the distribution shape of the reads within CDS. Wider sections of the vi
 
 Volcano plot shows statistical significance (P value) in Y axis and magnitude of differential expression in fold change.
 
-DESeq2 volcano plot:
+*DESeq2 volcano plot*:
+
 .. image:: DESeq-Volcano.png
    :width: 800px
    :height: 1000px
