@@ -397,9 +397,15 @@ EXAMPLE:
 
 ::
 
-    python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4
+    python scripts/prokseq.py -s samples.bowtie.PEsample -p param.bowtie.yaml -n 4 (For paired end reads)
+    
+    python scripts/prokseq.py -s samples.bowtie.SEsample -p param.bowtie.yaml -n 4 (For single end reads)
 
-The program will run with sample file "samples.bowtie.PEsample", and parameter file "param.bowtie.yaml". The program will also utilize 4 processors.
+The program will run with sample file "samples.bowtie.PE/SEsample", and parameter file "param.bowtie.yaml". The program will also utilize 4 processors.
+
+*samples.bowtie.PEsample: This is for Paired end reads*
+
+*samples.bowtie.SEsample: This is for single end reads*
 
 To run the program, the dependencies mentioned above are essential. However, the executable binaries are bundled in the folder "depend". The details of the parameter and the sample files are as below. An example parameter (param.bowtie.yaml) and sample file (samples.bowtie.PEsample) are bundled together with the package in the exampleFiles.tar.gz.
 
@@ -592,7 +598,7 @@ DATA FILES:
                 1. TERN2NAME.csv
                    Gene Ontology to terms mapping csv file (Eg: GO:0000001,mitochondrion inheritance).
 		   This is the GO term classification which is common for all organisms.
-                2. TERM2NAME.csv
+                2. TERM2GO.csv
                    Gene Ontology to gene mapping csv file (Eg: GO:0003688,YPK_0001). This is Genome 
 		   specific Gene ontology file. TERM2GENE.csv is a comma delimited 2 column file. 
 		   First column is the GO term and second column is the gene name. User can download
