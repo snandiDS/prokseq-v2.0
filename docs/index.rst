@@ -747,7 +747,7 @@ Depending on the file names provided in the parameter file for the 'Featurecount
 
                 - **normalized.wig**: Single nucleotide visualization normalized Big wiggle file if user wants to visually compare RNA-seq data of different library depth.
 		
-		** All the .txt file and .csv file can be opened via XL. For details please follow the link `[How to open .txt and .csv file in XL] https://knowledgebase.constantcontact.com/articles/KnowledgeBase/6269-convert-a-text-file-to-an-excel-file?lang=en_US `_ 
+		** All the .txt file and .csv file can be opened via XL.** For details please follow the link `[How to open .txt and .csv file in XL] https://knowledgebase.constantcontact.com/articles/KnowledgeBase/6269-convert-a-text-file-to-an-excel-file?lang=en_US`_ 
 		
 8. **Plots**:
 -------------
