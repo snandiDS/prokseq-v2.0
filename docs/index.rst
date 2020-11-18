@@ -1114,7 +1114,54 @@ OR, follow the following:
 
 The depend folder will be populated.
 
+
+
+Frequently Asked Questions (FAQ):
+================================
+
+How can I get GTF, BED and GO annotation file of my strain?
+-----------------------------------------------------------
+ProkSeq provides a file that list all the bacterial GO annotation file downloadable link (Bacterial_annotation_Download_link.txt). You can download GTF and GO annotation file from the link.
+For BED file use the script gtf2bed.sh (you can find it in the script folder) to convert downloaded gtf file to bed.
+ProkSeq require two file for GO enrichment analysis 1) TERN2NAME.csv: This is the GO term classification which is common for all organisms. Can be found in ProkSeq/data folder 2) TERM2GO.csv: This is Genome specific Gene ontology file. Use the script GOannotation.py to convert the downloaded GO annotation file to required format. You can also follow other steps to get GO annotation file. First check if your strain is among the 15 bacterial species, mentioned in the readthedoc above. If so, you can download GO annotation as well as other annotation file require for ProkSeq. Secondly, you can download the GO annotation file from this link http://genome2d.molgenrug.nl/g2d_core_select_genbank.php. After that, you need to convert the format according to ProkSeq requirement (You can use XL to open the file and save as .csv format. 
+
+I want to do pathway analysis with less strict log2fold cut-off?
+----------------------------------------------------------------
+You can use change the log2fold cut off in to the parameter file. Open the parameter file and change the value accordingly 
+PATHWAY:
+   cutoffPositive : 2.0  #logfold upper limit
+   cutoffNegative : -2.0 #logfold lower limit
+
+Should we use normalized counts for DESeq2?
+-------------------------------------------
+- DESeq2 has assumptions, based on the property of raw unnormalised counts. So use of any normalized count like RPKM, CPM, TPM or any other normalized values is not advisable. 
+
+When can I use RUVseq Normalization?
+-----------------------------------
+- Risso, et al., 2014  showed that RUVSeq effectively reduces library preparation effects without weakening the sample versus control effect by using in silico empirical control genes. We also suggest to use RUVSeq when user suspect an unwanted variation among the library due to library depth, preparation or comparing to condition which are not very much similar like stress response, or growth phase variation.
+
+Does ProkSeq use normalized value for Differential expression analysis?
+-----------------------------------------------------------------------
+-No, ProkSeq does not use any normalised count for DE analysis. Subsequent DE analysis in ProkSeq is done on the original counts which is accessible through the counts method in RUVSeq. Meanwhile RUVSeq + DESeq2 is valid because it does use the raw counts but includes a noise factor in the mode.
+When and how to use average nucleotide coverage value?
+Normalize base count method is a variant of the total count approach that use for normalizing gene-specific read alignments. In case of extreme conditions where data are presumed to have larger variation between two groups, statistical significance of differential expression of a gene can be further evaluated by using average normalized base count data as shown by Creecy et al., 2015 (https://pubmed.ncbi.nlm.nih.gov/25483350/). Average base counts of individual transcriptional features make all samples directly comparable when two data sets have higher variation because of the experimental setup like logarithmic phase versus stationary phase. 
+
+How can I convert the csv/txt file to XL file?
+---------------------------------------------
+-ProkSeq provides an R script (Convert2XL.R) to convert all csv/txt file into XL. See the readthedoc for in details.
+
+When can I use NOIseq?
+---------------------
+-If under some circumstances,  you do not have any biological replicate, then you can use NOISeq. For details read the paper about NOISeq https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4666377/
+
+I do not have replicate, Can I use DESeq2 or edgeR?
+--------------------------------------------------
+-NO, we do not recommend DESeq2 or edgeR for differential expression analysis if you do not have any biological replicate.
+
+How can I get my pictures in higher resolution, different format and size?
+--------------------------------------------------------------------------
+-ProkSeq provides an R script (plotScript.R ) to do so. You can change size, resolution, type (pdf,png, tiff, svg etc). For details see OUTPUT/plot in the readthedoc.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
