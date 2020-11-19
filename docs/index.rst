@@ -1116,7 +1116,7 @@ The depend folder will be populated.
 
 
 
-Frequently Asked Questions (FAQ):
+FREEQUENTLY ASKED QUESTIONS (FAQ):
 ================================
 
 How can I get GTF, BED and GO annotation file of my strain?
@@ -1143,7 +1143,9 @@ When can I use RUVseq Normalization?
 Does ProkSeq use normalized value for Differential expression analysis?
 -----------------------------------------------------------------------
 -No, ProkSeq does not use any normalised count for DE analysis. Subsequent DE analysis in ProkSeq is done on the original counts which is accessible through the counts method in RUVSeq. Meanwhile RUVSeq + DESeq2 is valid because it does use the raw counts but includes a noise factor in the mode.
+
 When and how to use average nucleotide coverage value?
+-----------------------------------------------------
 Normalize base count method is a variant of the total count approach that use for normalizing gene-specific read alignments. In case of extreme conditions where data are presumed to have larger variation between two groups, statistical significance of differential expression of a gene can be further evaluated by using average normalized base count data as shown by Creecy et al., 2015 (https://pubmed.ncbi.nlm.nih.gov/25483350/). Average base counts of individual transcriptional features make all samples directly comparable when two data sets have higher variation because of the experimental setup like logarithmic phase versus stationary phase. 
 
 How can I convert the csv/txt file to XL file?
