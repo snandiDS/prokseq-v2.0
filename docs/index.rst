@@ -1125,6 +1125,11 @@ ProkSeq provides a file that list all the bacterial GO annotation file downloada
 For BED file use the script gtf2bed.sh (you can find it in the script folder) to convert downloaded gtf file to bed.
 ProkSeq require two file for GO enrichment analysis 1) TERN2NAME.csv: This is the GO term classification which is common for all organisms. Can be found in ProkSeq/data folder 2) TERM2GO.csv: This is Genome specific Gene ontology file. Use the script GOannotation.py to convert the downloaded GO annotation file to required format. You can also follow other steps to get GO annotation file. First check if your strain is among the 15 bacterial species, mentioned in the readthedoc above. If so, you can download GO annotation as well as other annotation file require for ProkSeq. Secondly, you can download the GO annotation file from this link http://genome2d.molgenrug.nl/g2d_core_select_genbank.php. After that, you need to convert the format according to ProkSeq requirement (You can use XL to open the file and save as .csv format. 
 
+
+How the GO and KEG enrichment are done in ProkSeq?
+---------------------------------------------------
+ProkSeq uses clusterProfiler for GO and KEGG enrichment. However, ProkSeq uses the option for GO enrichment of non-model organisms in clusterProfiler. A GO annotation file for the organism can be downloaded and converted to required format by “GOannotation.sh”, an added feature in ProkSeq. For KEGG pathway enrichment analysis, ProkSeq uses “enrichKEGG” option in clusterProfiler that allows to search enrich pathways in the KEGG database.  
+
 I want to do pathway analysis with less strict log2fold cut-off?
 ----------------------------------------------------------------
 You can use change the log2fold cut off in to the parameter file. Open the parameter file and change the value accordingly 
