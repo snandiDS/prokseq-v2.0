@@ -1114,7 +1114,11 @@ OR, follow the following:
 
 The depend folder will be populated.
 
+How to Cite ProkSeq:
+====================
+A K M Firoj Mahmud, Nicolas Delhomme, Soumyadeep Nandi, Maria Fällman, ProkSeq for complete analysis of RNA-Seq data from prokaryotes, Bioinformatics, 2020;, btaa1063, https://doi.org/10.1093/bioinformatics/btaa1063
 
+Link of the article: https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa1063/6050703
 
 FREEQUENTLY ASKED QUESTIONS (FAQ):
 ================================
