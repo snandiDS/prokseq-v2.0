@@ -801,7 +801,7 @@ GOenricher=enricher(geneList, pvalueCutoff = 0.05, pAdjustMethod = "BH", univers
 write.table(GOenricher, file = "GOenricher.txt", append = FALSE, quote = TRUE, sep = " ",eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
 goPath <- data.frame(GOenricher[,1:7])
 write.table(goPath, file = "GOpathways.txt", append = FALSE, quote = FALSE, sep = "\t", eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
-kegg <- enrichKEGG(gene= geneList,organism= 'ypy',pvalueCutoff = 0.05)
+kegg <- enrichKEGG(gene= geneList,organism= org, pvalueCutoff = 0.05)
 write.table(kegg, file = "KEGGenricher.txt", append = FALSE, quote = TRUE, sep = " ",eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
 keggPath <- data.frame(kegg[,1:7])
 write.table(keggPath, file = "KEGGpathway.txt", append = FALSE, quote = FALSE, sep = "\t", eol = "\n", na = "NA", dec = ".", row.names = TRUE,col.names = TRUE, qmethod = c("escape", "double"),fileEncoding = "")
